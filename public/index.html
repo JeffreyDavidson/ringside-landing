@@ -1086,18 +1086,41 @@
 </footer>
 
 <script>
-    // Waitlist form handler (placeholder)
     function handleWaitlist(e) {
         e.preventDefault();
         const email = document.getElementById('waitlist-email').value;
         const btn = e.target.querySelector('button');
-        btn.textContent = 'You\'re In!';
-        btn.style.background = '#22c55e';
-        setTimeout(() => {
-            btn.textContent = 'Join Waitlist';
-            btn.style.background = '';
-        }, 3000);
-        document.getElementById('waitlist-email').value = '';
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        fetch('/api/waitlist.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, product: 'ringside' })
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.success) {
+                btn.textContent = "You're In!";
+                btn.style.background = '#22c55e';
+                document.getElementById('waitlist-email').value = '';
+                setTimeout(() => {
+                    btn.textContent = 'Join Waitlist';
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            } else {
+                btn.textContent = 'Try Again';
+                btn.style.background = '#e62222';
+                btn.disabled = false;
+                setTimeout(() => { btn.textContent = 'Join Waitlist'; btn.style.background = ''; }, 3000);
+            }
+        })
+        .catch(() => {
+            btn.textContent = 'Try Again';
+            btn.disabled = false;
+            setTimeout(() => { btn.textContent = 'Join Waitlist'; btn.style.background = ''; }, 3000);
+        });
     }
 
     // Stat counter animation
