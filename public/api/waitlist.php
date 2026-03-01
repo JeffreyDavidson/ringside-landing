@@ -1,5 +1,16 @@
 <?php
 
+// Load .env from project root
+$envFile = __DIR__ . '/../../.env';
+if (file_exists($envFile)) {
+    foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+        if (str_starts_with(trim($line), '#')) continue;
+        if (str_contains($line, '=')) {
+            putenv(trim($line));
+        }
+    }
+}
+
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
@@ -27,7 +38,13 @@ if (!$email) {
 
 $product = $input['product'] ?? 'ringside';
 
-$apiKey = 're_QE74YDW7_LDWWYLNCnisMVscoxLfwA9ZK';
+$apiKey = getenv('RESEND_API_KEY') ?: ($_ENV['RESEND_API_KEY'] ?? '');
+
+if (!$apiKey) {
+    http_response_code(500);
+    echo json_encode(['error' => 'API key not configured']);
+    exit;
+}
 
 // First, ensure we have an audience. We'll create contacts directly.
 $ch = curl_init('https://api.resend.com/audiences');
