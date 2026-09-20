@@ -401,6 +401,159 @@ summary svg {
     background: #171819;
 }
 
+.operations-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 3.5rem;
+}
+
+.operations-panel {
+    overflow: hidden;
+    border: 1px solid #454548;
+    background: #0d0e0f;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 22%);
+}
+
+.operations-panel-top,
+.operations-panel-bottom {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    color: #8f9094;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.operations-panel-top {
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.operations-status {
+    color: #ff8588;
+}
+
+.operations-event {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 1.25rem;
+    background: linear-gradient(120deg, #17191b, #111213);
+}
+
+.operations-event p {
+    margin-bottom: 0.5rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.operations-event h3 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.operations-count {
+    color: var(--color-signal);
+    font-family: Anton, 'Arial Narrow', sans-serif;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    text-align: right;
+}
+
+.operations-count small {
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.operations-matches > div {
+    display: grid;
+    grid-template-columns: 2rem 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--line);
+}
+
+.operations-matches span {
+    color: var(--color-signal);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.operations-matches strong {
+    font-size: 0.95rem;
+}
+
+.operations-matches em {
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-style: normal;
+}
+
+.operations-panel-bottom {
+    border-top: 1px solid var(--line);
+}
+
+.operations-panel-bottom strong {
+    margin-right: auto;
+    color: #f7f7f5;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+}
+
+.operations-copy {
+    max-width: 28rem;
+}
+
+.operations-kicker {
+    margin-bottom: 1rem;
+    color: var(--color-signal);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.operations-copy h3 {
+    font-size: clamp(2.25rem, 4vw, 4rem);
+}
+
+.operations-copy > p:not(.operations-kicker) {
+    margin-top: 1.5rem;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.operations-list {
+    display: grid;
+    gap: 0.9rem;
+    margin-top: 2rem;
+}
+
+.operations-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+}
+
+.operations-list .icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    color: var(--color-signal);
+}
+
 .capabilities-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -690,6 +843,7 @@ summary::-webkit-details-marker {
     }
 
     .section-heading,
+    .operations-grid,
     .championship-section,
     .faq-layout,
     .closing-section {
@@ -716,6 +870,18 @@ summary::-webkit-details-marker {
 
     .show-steps {
         margin-top: 2.5rem;
+    }
+
+    .operations-grid {
+        gap: 2.5rem;
+    }
+
+    .operations-matches > div {
+        grid-template-columns: 1.5rem 1fr;
+    }
+
+    .operations-matches em {
+        grid-column: 2;
     }
 
     .workflow-steps,
