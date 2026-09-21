@@ -1,0 +1,24 @@
+name: Check marketing site
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check homepage
+        run: curl --fail --silent --show-error --location --max-time 20 --output /dev/null https://theringside.app/
+
+      - name: Check waitlist endpoint
+        run: |
+          status="$(curl --silent --show-error --location --max-time 20 --output /dev/null --write-out '%{http_code}' --request OPTIONS https://theringside.app/api/waitlist.php)"
+          if [ "$status" != "204" ]; then
+            echo "Expected the waitlist endpoint to answer a safe OPTIONS request with 204, received $status."
+            exit 1
+          fi
