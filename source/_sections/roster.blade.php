@@ -6,7 +6,6 @@
                 <x-roster-row number="02" title="Know who belongs together.">Manage the teams, stables and alliances behind your stories, with membership history that stays connected.</x-roster-row>
                 <x-roster-row number="03" title="Give every role a place.">Keep managers and officials alongside your wrestling roster, so the people outside the ropes are part of the plan.</x-roster-row>
             </div>
-        </div>
         <div class="overflow-hidden border border-ringside-line-card border-t-[3px] border-t-ringside-signal bg-ringside-surface-card" aria-label="Illustrative Ringside roster view">
             <div class="flex justify-between gap-4 border-b border-ringside-line px-5 py-4 text-[0.7rem] font-bold tracking-[0.1em] text-ringside-muted-subtle"><span>RINGSIDE / ROSTER</span><strong class="text-ringside-signal-soft">18 ACTIVE</strong></div>
             <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-4 border-b border-ringside-line px-5 py-4"><span class="text-xs font-bold text-ringside-signal">01</span><strong class="text-[0.95rem]">Jordan Vale</strong><em class="text-xs not-italic text-ringside-muted">Available</em></div>
