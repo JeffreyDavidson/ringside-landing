@@ -49,9 +49,9 @@
         <x-page-width class="flex items-center justify-between gap-6 max-[767px]:gap-3.5">
             <x-wordmark />
             <nav class="flex items-center gap-5" aria-label="Main navigation">
-                <a class="inline-flex min-h-11 items-center font-semibold transition-colors hover:text-ringside-signal" href="#roster">Features</a>
+                <a class="inline-flex min-h-11 items-center font-semibold transition-colors hover:text-ringside-signal max-[430px]:!hidden" href="#roster">Features</a>
                 <a class="inline-flex min-h-11 items-center font-semibold transition-colors hover:text-ringside-signal max-[760px]:!hidden" href="#how-it-works">How it works</a>
-                <a class="inline-flex min-h-11 items-center justify-center gap-4 border border-ringside-outline px-5 py-2.5 font-bold transition-colors hover:border-ringside-white hover:bg-ringside-surface-faq max-[520px]:px-3 max-[520px]:text-sm" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
+                <a class="inline-flex min-h-11 items-center justify-center gap-4 border border-ringside-outline px-5 py-2.5 font-bold transition-colors hover:border-ringside-white hover:bg-ringside-surface-faq max-[520px]:px-3 max-[520px]:text-sm max-[430px]:gap-2 max-[430px]:px-2.5 max-[430px]:text-xs" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
             </nav>
         </x-page-width>
     </header>
