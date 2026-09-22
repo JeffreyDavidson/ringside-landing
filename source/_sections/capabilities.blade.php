@@ -17,7 +17,6 @@
                 <x-kicker class="mb-4">The work behind the bell</x-kicker>
                 <x-display-heading tag="h3" class="max-w-[9ch] text-[clamp(2.25rem,4vw,4rem)]">One view. No loose ends.</x-display-heading>
                 <p class="mt-6 text-[1.1rem] leading-[1.7] text-ringside-muted">Rosters, events, matches and titles stay connected as your promotion moves from plan to result.</p>
-                <ul class="mt-8 grid gap-3"><x-checklist-item text="One connected roster" /><x-checklist-item text="Every match card in context" /><x-checklist-item text="History that follows the title" /></ul>
             </div>
             <div>
                 <div class="grid grid-cols-3 gap-4 border-t border-ringside-line pt-6" aria-label="Event card summary">
@@ -32,5 +31,6 @@
                 </div>
             </div>
         </div>
+        <ul class="mt-12 grid grid-cols-3 gap-8 border-t border-ringside-line max-[767px]:grid-cols-1 max-[767px]:gap-0"><x-checklist-item text="One connected roster" /><x-checklist-item text="Every match card in context" /><x-checklist-item text="History that follows the title" /></ul>
     </x-page-width>
 </section>
