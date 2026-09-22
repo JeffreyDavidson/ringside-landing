@@ -44,8 +44,9 @@
     </script>
 </head>
 <body>
+    <div id="top" aria-hidden="true"></div>
     <a class="fixed left-4 top-4 z-10 -translate-y-[200%] bg-ringside-white p-4 text-ringside-black focus:translate-y-0" href="#main">Skip to content</a>
-    <header id="top" class="sticky top-0 z-20 border-b border-ringside-white-subtle bg-ringside-surface-header py-5">
+    <header class="sticky top-0 z-20 border-b border-ringside-white-subtle bg-ringside-surface-header py-5">
         <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)] flex items-center justify-between gap-6 max-[767px]:gap-3.5">
     <a class="inline-block font-display text-[2.75rem] font-normal uppercase leading-none tracking-[-0.035em]" href="#top" aria-label="Ringside home">RING<span class="text-ringside-signal">SIDE</span></a>
             <nav class="flex items-center gap-5" aria-label="Main navigation">
@@ -72,7 +73,6 @@
 </a>
             <a class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-outline px-7 py-3.5 text-base font-bold leading-[1.4] transition-colors hover:border-ringside-white hover:bg-ringside-surface-faq" href="#capabilities">Explore Ringside <svg class="h-5 w-5 flex-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg></a>
         </div>
-        <p class="mt-5 text-[0.9rem] text-ringside-muted-soft">Built for the work behind the bell.</p>
 </div>
 </section>
 
@@ -134,7 +134,7 @@
                 <h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance max-w-[12ch] text-[clamp(2.25rem,4vw,4rem)]">
     One view. No loose ends.
 </h3>
-                <p class="mt-6 text-[1.1rem] leading-[1.7] text-ringside-muted">Rosters, events, matches and titles stay connected as your promotion moves from plan to result.</p>
+                <p class="mt-6 text-[1.1rem] leading-[1.7] text-ringside-muted">Bring the people, officials and championship into view while the card is still taking shape.</p>
             </div>
             <div>
                 <div class="grid grid-cols-3 gap-4 border-t border-ringside-line pt-6" aria-label="Event card summary">
@@ -201,11 +201,11 @@
     <p class="mt-5 max-w-2xl text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Ringside follows the sequence promoters already know. Set the stage, build the card, run the night and carry the story forward.</p>
 </div>
         <div class="mt-14 grid grid-cols-2 gap-12 max-[767px]:mt-10 max-[767px]:grid-cols-1 max-[767px]:gap-8">
-            <div id="events" class="border-t border-ringside-white-half pt-8 max-[767px]:pt-5"><span class="mb-8 block text-xs font-bold uppercase tracking-[0.1em] text-ringside-signal-soft max-[767px]:mb-5">Before the bell</span><svg class="mb-8 h-10 w-10 stroke-current stroke-[1.5] max-[767px]:mb-5 max-[767px]:h-8 max-[767px]:w-8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance mb-4 text-[clamp(2rem,3.5vw,3rem)] max-[767px]:mb-3">
+            <div id="events" class="border-t border-ringside-white-half pt-8 max-[767px]:pt-5"><span class="mb-8 block text-xs font-bold uppercase tracking-[0.1em] text-ringside-white max-[767px]:mb-5">Before the bell</span><svg class="mb-8 h-10 w-10 stroke-current stroke-[1.5] max-[767px]:mb-5 max-[767px]:h-8 max-[767px]:w-8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance mb-4 text-[clamp(2rem,3.5vw,3rem)] max-[767px]:mb-3">
     Set the stage.
 </h3>
 <p class="text-[1.125rem] leading-[1.75] max-[767px]:text-base max-[767px]:leading-[1.6]">Organize events around your venues and dates. Keep the details of each show together as the card takes shape.</p><p class="mt-6 text-sm font-bold max-[767px]:mt-4">Events / Venues / Scheduling</p></div>
-            <div id="matches" class="border-t border-ringside-white-half pt-8 max-[767px]:pt-5"><span class="mb-8 block text-xs font-bold uppercase tracking-[0.1em] text-ringside-signal-soft max-[767px]:mb-5">When the card is set</span><svg class="mb-8 h-10 w-10 stroke-current stroke-[1.5] max-[767px]:mb-5 max-[767px]:h-8 max-[767px]:w-8" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5"/></svg><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance mb-4 text-[clamp(2rem,3.5vw,3rem)] max-[767px]:mb-3">
+            <div id="matches" class="border-t border-ringside-white-half pt-8 max-[767px]:pt-5"><span class="mb-8 block text-xs font-bold uppercase tracking-[0.1em] text-ringside-white max-[767px]:mb-5">When the card is set</span><svg class="mb-8 h-10 w-10 stroke-current stroke-[1.5] max-[767px]:mb-5 max-[767px]:h-8 max-[767px]:w-8" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5"/></svg><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance mb-4 text-[clamp(2rem,3.5vw,3rem)] max-[767px]:mb-3">
     Build the card.
 </h3>
 <p class="text-[1.125rem] leading-[1.75] max-[767px]:text-base max-[767px]:leading-[1.6]">Book wrestlers and tag teams, choose match types and assign officials. Record results when the match is done.</p><p class="mt-6 text-sm font-bold max-[767px]:mt-4">Competitors / Match types / Results</p></div>
@@ -244,41 +244,39 @@
 </section>
     <section class="border-y border-ringside-line bg-ringside-surface-index py-[clamp(4rem,7vw,7rem)]" aria-labelledby="proof-title">
     <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)]">
-    <div class="grid grid-cols-[0.9fr_1.1fr] items-start gap-16 max-[900px]:grid-cols-1 max-[900px]:gap-10">
-            <div class="max-w-xl">
-                <h2 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance max-w-[11ch] text-[clamp(2.5rem,5vw,4.75rem)]" id="proof-title">
-    One system changes the whole night.
+    <div class="grid grid-cols-[0.9fr_1.1fr] items-start gap-16 max-[1100px]:grid-cols-1 max-[1100px]:gap-10">
+            <div class="max-w-2xl">
+                <h2 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance max-w-[12ch] text-[clamp(2.5rem,5vw,4.75rem)]" id="proof-title">
+    A result should carry the whole story.
 </h2>
-                <p class="mt-6 max-w-[42rem] text-[1.1rem] leading-[1.7] text-ringside-muted">Ringside keeps the work connected from the first booking conversation to the history you carry into the next show.</p>
+                <p class="mt-6 max-w-[42rem] text-[1.1rem] leading-[1.7] text-ringside-muted">See how a booked match connects to its result—and how that result becomes part of championship history.</p>
             </div>
-            <div aria-label="Promoter outcomes">
-                <div class="grid grid-cols-[minmax(8rem,0.65fr)_minmax(10rem,0.9fr)_minmax(12rem,1.45fr)] gap-5 border-t border-ringside-line py-4 text-xs font-bold uppercase tracking-[0.08em] text-ringside-muted-subtle max-[640px]:grid-cols-[minmax(7rem,0.7fr)_minmax(10rem,1.3fr)] max-[640px]:gap-3">
-                    <span>Promoter moment</span>
-                    <span class="max-[640px]:hidden">Scattered work</span>
-                    <span>With Ringside</span>
-                </div>
-                <div class="grid grid-cols-[minmax(8rem,0.65fr)_minmax(10rem,0.9fr)_minmax(12rem,1.45fr)] gap-5 border-t border-ringside-line py-6 max-[640px]:grid-cols-[minmax(7rem,0.7fr)_minmax(10rem,1.3fr)] max-[640px]:gap-3">
-                    <strong class="text-ringside-signal">Find the right person</strong>
-                    <span class="text-ringside-muted max-[640px]:hidden">Checking notes and messages</span>
-                    <span>Roster context stays close to the booking.</span>
-                </div>
-                <div class="grid grid-cols-[minmax(8rem,0.65fr)_minmax(10rem,0.9fr)_minmax(12rem,1.45fr)] gap-5 border-t border-ringside-line py-6 max-[640px]:grid-cols-[minmax(7rem,0.7fr)_minmax(10rem,1.3fr)] max-[640px]:gap-3">
-                    <strong class="text-ringside-signal">Build the card</strong>
-                    <span class="text-ringside-muted max-[640px]:hidden">Rebuilding the plan in every place</span>
-                    <span>Match details and responsibilities share one plan.</span>
-                </div>
-                <div class="grid grid-cols-[minmax(8rem,0.65fr)_minmax(10rem,0.9fr)_minmax(12rem,1.45fr)] gap-5 border-y border-ringside-line py-6 max-[640px]:grid-cols-[minmax(7rem,0.7fr)_minmax(10rem,1.3fr)] max-[640px]:gap-3">
-                    <strong class="text-ringside-signal">Carry the story forward</strong>
-                    <span class="text-ringside-muted max-[640px]:hidden">Reconstructing what happened after the show</span>
-                    <span>Results and title history stay connected.</span>
-                </div>
+            <div class="min-w-0" aria-label="Illustrative match-to-history workflow">
+                <p class="border-t border-ringside-line py-4 text-xs font-bold uppercase tracking-[0.08em] text-ringside-muted-subtle">One match, from booking to record</p>
+                <ol class="grid grid-cols-3 border-y border-ringside-line max-[900px]:grid-cols-1">
+                    <li class="min-w-0 py-6 pr-6 max-[900px]:border-b max-[900px]:border-ringside-line max-[900px]:pr-0 min-[901px]:border-r min-[901px]:border-ringside-line min-[901px]:pr-5">
+                        <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Booked</span>
+                        <h3 class="mt-3 text-lg font-bold">The match card</h3>
+                        <p class="mt-2 text-base leading-relaxed text-ringside-muted min-[901px]:text-sm">Competitors, referee and championship belong to the same match.</p>
+                    </li>
+                    <li class="min-w-0 py-6 px-5 max-[900px]:border-b max-[900px]:border-ringside-line max-[900px]:px-0 min-[901px]:border-r min-[901px]:border-ringside-line">
+                        <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Completed</span>
+                        <h3 class="mt-3 text-lg font-bold">The result</h3>
+                        <p class="mt-2 text-base leading-relaxed text-ringside-muted min-[901px]:text-sm">Record the outcome against the match that was booked.</p>
+                    </li>
+                    <li class="min-w-0 py-6 pl-5 max-[900px]:pl-0">
+                        <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Carried forward</span>
+                        <h3 class="mt-3 text-lg font-bold">The title record</h3>
+                        <p class="mt-2 text-base leading-relaxed text-ringside-muted min-[901px]:text-sm">Keep championship history with the matches that shaped it.</p>
+                    </li>
+                </ol>
             </div>
         </div>
 </div>
 </section>
     <section class="border-y border-ringside-line bg-ringside-surface-index py-10 max-[767px]:py-8" aria-label="Founding access prompt">
     <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)] flex items-center justify-between gap-8 max-[767px]:flex-col max-[767px]:items-start">
-    <p class="max-w-2xl text-[1.125rem] leading-[1.6] text-ringside-muted">When the card matters, every detail should live in the same place.</p>
+    <p class="max-w-2xl text-[1.125rem] leading-[1.6] text-ringside-muted">Get an early look at a better way to run the show.</p>
         <a class="inline-flex min-h-12 flex-none items-center justify-center gap-4 border border-ringside-outline px-6 py-3 text-sm font-bold transition-colors hover:border-ringside-white hover:bg-ringside-surface-faq" href="#waitlist">Join the founding class <svg class="h-5 w-5 flex-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
 </div>
@@ -327,7 +325,8 @@
         </div>
 </div>
 </section>
-    <section class="mx-auto grid w-[calc(100%-6rem)] max-w-[80rem] grid-cols-[1.25fr_1fr] items-center gap-24 border-t-[3px] border-t-ringside-red bg-ringside-surface-index py-[clamp(4rem,7vw,7rem)] max-[900px]:grid-cols-1 max-[900px]:gap-10 max-[767px]:w-[calc(100%-2.5rem)]" id="waitlist" aria-labelledby="closing-title">
+    <section class="border-t-[3px] border-t-ringside-red bg-ringside-surface-index" id="waitlist" aria-labelledby="closing-title">
+    <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)] grid grid-cols-[1.25fr_1fr] items-center gap-24 py-[clamp(4rem,7vw,7rem)] max-[900px]:grid-cols-1 max-[900px]:gap-10">
     <div><p class="font-body text-[0.75rem] font-bold uppercase tracking-[0.1em] text-ringside-signal mb-4">
     Founding access
 </p>
@@ -335,21 +334,23 @@
     Build the tool your promotion should have had from the start.
 </h2>
 </div>
-    <div>
-        <p class="text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Join the founding class and help shape the way independent wrestling promotions organize their next show.</p>
-        <form class="mt-6 flex flex-wrap gap-3" onsubmit="handleWaitlist(event)" novalidate>
-            <label class="sr-only" for="waitlist-email">Email address</label>
-            <input class="min-h-14 min-w-0 flex-1 border border-ringside-line-bright bg-ringside-surface-card px-4 text-ringside-ink placeholder:text-ringside-muted-subtle focus:border-ringside-white focus:outline-3 focus:outline-ringside-white focus:outline-offset-2 max-[520px]:basis-full" id="waitlist-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="waitlist-status" required>
-            <button class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-red bg-ringside-red px-7 py-3.5 text-base font-bold leading-[1.4] text-ringside-white transition-colors hover:border-ringside-red-dark hover:bg-ringside-red-dark max-[520px]:w-full" type="submit"><span data-waitlist-label>Join the founding class</span> <svg class="h-5 w-5 flex-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        <div>
+            <p class="text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Join the founding class and help shape the way independent wrestling promotions organize their next show.</p>
+            <form class="mt-6 flex flex-wrap gap-3" action="/api/waitlist.php" method="post" onsubmit="handleWaitlist(event)">
+                <label class="sr-only" for="waitlist-email">Email address</label>
+                <input class="min-h-14 min-w-0 flex-1 border border-ringside-line-bright bg-ringside-surface-card px-4 text-ringside-ink placeholder:text-ringside-muted-subtle focus:border-ringside-white focus:outline-3 focus:outline-ringside-white focus:outline-offset-2 max-[520px]:basis-full" id="waitlist-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="waitlist-status" required>
+                <input type="hidden" name="product" value="ringside">
+                <button class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-red bg-ringside-red px-7 py-3.5 text-base font-bold leading-[1.4] text-ringside-white transition-colors hover:border-ringside-red-dark hover:bg-ringside-red-dark max-[520px]:w-full" type="submit"><span data-waitlist-label>Join the founding class</span> <svg class="h-5 w-5 flex-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </button>
-        </form>
-        <p class="mt-3 text-sm text-ringside-muted-subtle" id="waitlist-status" role="status" aria-live="polite">No spam. Just launch updates.</p>
-        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[0.7rem] font-bold uppercase tracking-[0.08em] text-ringside-muted-subtle" aria-label="Founding class details">
-            <span class="inline-flex items-center gap-3 before:h-1.5 before:w-1.5 before:bg-ringside-signal before:content-['']">Early access</span>
-            <span class="inline-flex items-center gap-3 before:h-1.5 before:w-1.5 before:bg-ringside-signal before:content-['']">Product feedback</span>
-            <span class="inline-flex items-center gap-3 before:h-1.5 before:w-1.5 before:bg-ringside-signal before:content-['']">Launch updates</span>
+            </form>
+            <p class="mt-3 text-sm text-ringside-muted-subtle" id="waitlist-status" role="status" aria-live="polite">No spam. Just launch updates.</p>
+            <div class="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[0.7rem] font-bold uppercase tracking-[0.08em] text-ringside-muted-subtle" aria-label="Founding class details">
+                <span class="inline-flex items-center gap-3 before:h-1.5 before:w-1.5 before:bg-ringside-signal before:content-['']">Early access</span>
+                <span class="inline-flex items-center gap-3 before:h-1.5 before:w-1.5 before:bg-ringside-signal before:content-['']">Product feedback</span>
+                <span class="inline-flex items-center gap-3 before:h-1.5 before:w-1.5 before:bg-ringside-signal before:content-['']">Launch updates</span>
+            </div>
         </div>
-    </div>
+</div>
 </section>
     </main>
 

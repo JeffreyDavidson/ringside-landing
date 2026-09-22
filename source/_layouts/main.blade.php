@@ -44,8 +44,9 @@
     </script>
 </head>
 <body>
+    <div id="top" aria-hidden="true"></div>
     <a class="fixed left-4 top-4 z-10 -translate-y-[200%] bg-ringside-white p-4 text-ringside-black focus:translate-y-0" href="#main">Skip to content</a>
-    <header id="top" class="sticky top-0 z-20 border-b border-ringside-white-subtle bg-ringside-surface-header py-5">
+    <header class="sticky top-0 z-20 border-b border-ringside-white-subtle bg-ringside-surface-header py-5">
         <x-page-width class="flex items-center justify-between gap-6 max-[767px]:gap-3.5">
             <x-wordmark />
             <nav class="flex items-center gap-5" aria-label="Main navigation">

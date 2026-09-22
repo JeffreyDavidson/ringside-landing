@@ -9,7 +9,6 @@
             <a class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-red bg-ringside-red px-7 py-3.5 text-base font-bold leading-[1.4] text-ringside-white shadow-[0_12px_30px_rgb(203_32_40_/_24%)] transition-colors hover:border-ringside-red-dark hover:bg-ringside-red-dark" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
             <a class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-outline px-7 py-3.5 text-base font-bold leading-[1.4] transition-colors hover:border-ringside-white hover:bg-ringside-surface-faq" href="#capabilities">Explore Ringside <svg class="h-5 w-5 flex-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg></a>
         </div>
-        <p class="mt-5 text-[0.9rem] text-ringside-muted-soft">Built for the work behind the bell.</p>
     </x-page-width>
 </section>
 
