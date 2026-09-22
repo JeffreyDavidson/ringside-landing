@@ -25,3 +25,10 @@ $ACTIVATE_RELEASE()
 The release helper creates the new zero-downtime release, Composer installs the locked production dependencies, Jigsaw generates the site into `public`, and the activation helper switches traffic to the completed release.
 
 After changing the deployment script, deploy staging first and verify the generated site before deploying production.
+
+## Waitlist configuration
+
+The waitlist endpoint requires both `RESEND_API_KEY` and an explicit
+`RESEND_AUDIENCE_ID`. Production and staging must use different Resend
+audiences so test signups cannot enter the production list. Keep both values in
+the Forge environment only; never commit them to the repository.
