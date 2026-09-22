@@ -44,14 +44,14 @@
     </script>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header id="top" class="site-header">
+    <a class="fixed left-4 top-4 z-10 -translate-y-[200%] bg-ringside-white p-4 text-ringside-black focus:translate-y-0" href="#main">Skip to content</a>
+    <header id="top" class="sticky top-0 z-20 border-b border-ringside-white-subtle bg-ringside-surface-header py-5">
         <x-page-width class="flex items-center justify-between gap-6 max-[767px]:gap-3.5">
             <x-wordmark />
             <nav class="flex items-center gap-5" aria-label="Main navigation">
-                <a class="nav-link" href="#roster">Features</a>
-                <a class="nav-link max-[760px]:!hidden" href="#how-it-works">How it works</a>
-                <a class="button button-outline header-action" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
+                <a class="inline-flex min-h-11 items-center font-semibold transition-colors hover:text-ringside-signal" href="#roster">Features</a>
+                <a class="inline-flex min-h-11 items-center font-semibold transition-colors hover:text-ringside-signal max-[760px]:!hidden" href="#how-it-works">How it works</a>
+                <a class="inline-flex min-h-11 items-center justify-center gap-4 border border-ringside-outline px-5 py-2.5 font-bold transition-colors hover:border-ringside-white hover:bg-ringside-surface-faq max-[520px]:px-3 max-[520px]:text-sm" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
             </nav>
         </x-page-width>
     </header>
@@ -60,10 +60,10 @@
         @yield('content')
     </main>
 
-    <footer class="site-footer">
+    <footer class="border-t border-ringside-line py-8">
         <x-page-width class="flex flex-wrap items-center justify-between gap-6">
             <div class="flex flex-wrap items-center gap-5"><x-wordmark /><p>© 2026 Ringside. Wrestling promotion management.</p></div>
-            <a class="footer-link" href="#top">Back to top <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14"/></svg></a>
+            <a class="inline-flex min-h-11 items-center gap-4 text-sm text-ringside-muted transition-colors hover:text-ringside-signal" href="#top">Back to top <svg class="h-5 w-5 flex-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14"/></svg></a>
         </x-page-width>
     </footer>
 
