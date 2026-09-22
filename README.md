@@ -15,8 +15,8 @@ vendor/bin/jigsaw build production
 
 The generated site is written to `public/`.
 
-Tailwind 4 is the CSS build entry. The existing marketing stylesheet is currently
-included from `tailwind.input.css` while the Blade markup and section styles migrate
+Tailwind 4 is the CSS build entry. Brand tokens live in the `@theme` block at the
+top of `source/css/marketing.css`; the Blade markup and section styles are migrating
 to Tailwind utilities in focused passes. The generated `source/css/tailwind.css`
 file remains checked in so Jigsaw and local static previews have the same output.
 

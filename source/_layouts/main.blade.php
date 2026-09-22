@@ -46,14 +46,14 @@
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header id="top" class="site-header">
-        <div class="page-width flex items-center justify-between gap-6">
+        <x-page-width class="flex items-center justify-between gap-6 max-[767px]:gap-3.5">
             <x-wordmark />
             <nav class="flex items-center gap-5" aria-label="Main navigation">
                 <a class="nav-link" href="#roster">Features</a>
-                <a class="nav-link max-[760px]:hidden" href="#how-it-works">How it works</a>
+                <a class="nav-link max-[760px]:!hidden" href="#how-it-works">How it works</a>
                 <a class="button button-outline header-action" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
             </nav>
-        </div>
+        </x-page-width>
     </header>
 
     <main id="main">
@@ -61,10 +61,10 @@
     </main>
 
     <footer class="site-footer">
-        <div class="page-width flex flex-wrap items-center justify-between gap-6">
+        <x-page-width class="flex flex-wrap items-center justify-between gap-6">
             <div class="flex flex-wrap items-center gap-5"><x-wordmark /><p>© 2026 Ringside. Wrestling promotion management.</p></div>
             <a class="footer-link" href="#top">Back to top <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14"/></svg></a>
-        </div>
+        </x-page-width>
     </footer>
 
     <script>

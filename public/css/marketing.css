@@ -1,3 +1,42 @@
+@import "tailwindcss" source(none);
+
+@source "../**/*.blade.php";
+
+@theme inline {
+    --font-display: Anton, 'Arial Narrow', sans-serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    --color-ringside-surface: #101112;
+    --color-ringside-surface-deep: #060607;
+    --color-ringside-surface-header: #09090a;
+    --color-ringside-surface-index: #0b0c0d;
+    --color-ringside-surface-panel: #171819;
+    --color-ringside-surface-faq: #161719;
+    --color-ringside-surface-card: #0d0e0f;
+    --color-ringside-ink: #f7f7f5;
+    --color-ringside-muted: #bfc0c3;
+    --color-ringside-muted-bright: #d5d5d7;
+    --color-ringside-muted-soft: #c6c6c8;
+    --color-ringside-muted-subtle: #8f9094;
+    --color-ringside-line: #363638;
+    --color-ringside-line-bright: #49494c;
+    --color-ringside-line-card: #454548;
+    --color-ringside-signal: #ff4b50;
+    --color-ringside-signal-soft: #ff8588;
+    --color-ringside-signal-border: rgb(255 75 80 / 50%);
+    --color-ringside-red: #cb2028;
+    --color-ringside-red-dark: #a61920;
+    --color-ringside-outline: #b7b7b9;
+    --color-ringside-white: #ffffff;
+    --color-ringside-white-half: rgb(255 255 255 / 50%);
+    --color-ringside-white-third: rgb(255 255 255 / 35%);
+    --color-ringside-white-subtle: rgb(255 255 255 / 8%);
+    --color-ringside-black: #111111;
+    --color-ringside-black-overlay: rgb(0 0 0 / 36%);
+    --radius-ringside-pill: 999px;
+    --color-signal: var(--color-ringside-signal);
+}
+
 @font-face {
     font-family: Anton;
     font-style: normal;
@@ -6,7 +45,7 @@
     src: url('../fonts/anton/anton-regular.ttf') format('truetype');
 }
 
-/* Shared Ringside brand tokens live in tokens.css. */
+/* Shared Ringside brand tokens live in this Tailwind theme. */
 :root {
     color-scheme: dark;
 }
@@ -54,26 +93,10 @@ summary {
     outline-offset: 6px;
 }
 
-.page-width {
-    width: min(100% - 6rem, 1280px);
-    margin-inline: auto;
-}
-
-.display,
 .wordmark {
     font-family: var(--font-display);
     font-weight: 400;
     text-transform: uppercase;
-}
-
-.display {
-    text-wrap: balance;
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-}
-
-h2.display {
-    font-size: clamp(2.6rem, 4.5vw, 4.5rem);
 }
 
 .site-header {
@@ -293,10 +316,6 @@ summary svg {
 
 .feature-index svg {
     margin-left: auto;
-}
-
-.section-pad {
-    padding-block: clamp(4rem, 7vw, 7rem);
 }
 
 .section-heading {
@@ -638,21 +657,12 @@ summary svg {
     max-width: 28rem;
 }
 
-.operations-kicker {
-    margin-bottom: 1rem;
-    color: var(--color-ringside-signal);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
 .operations-copy h3 {
     max-width: 9ch;
     font-size: clamp(2.25rem, 4vw, 4rem);
 }
 
-.operations-copy > p:not(.operations-kicker) {
+.operations-copy-description {
     margin-top: 1.5rem;
     color: var(--color-ringside-muted);
     font-size: 1.1rem;
@@ -975,13 +985,6 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 767px) {
-    .desktop-link {
-        display: none;
-    }
-    .page-width {
-        width: calc(100% - 2.5rem);
-    }
-
     .site-header {
         padding-block: 1rem;
     }
@@ -990,7 +993,6 @@ summary::-webkit-details-marker {
         font-size: 2rem;
     }
 
-    .site-header .page-width,
     .site-header nav {
         gap: 0.875rem;
     }

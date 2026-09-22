@@ -1,5 +1,5 @@
-<section class="closing-section section-pad page-width" id="waitlist" aria-labelledby="closing-title">
-    <div><p class="operations-kicker">Founding access</p><h2 id="closing-title" class="display">Build the tool your promotion should have had from the start.</h2></div>
+<section class="closing-section py-[clamp(4rem,7vw,7rem)] mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)]" id="waitlist" aria-labelledby="closing-title">
+    <div><x-kicker class="mb-4">Founding access</x-kicker><x-display-heading id="closing-title" class="text-[clamp(2.6rem,4.5vw,4.5rem)]">Build the tool your promotion should have had from the start.</x-display-heading></div>
     <div>
         <p>Join the founding class and help shape the way independent wrestling promotions organize their next show.</p>
         <form class="waitlist-form" onsubmit="handleWaitlist(event)">
