@@ -1,6 +1,6 @@
 <section id="capabilities" class="capabilities-section section-pad" aria-labelledby="capabilities-title">
     <div class="page-width">
-        <x-section-heading id="capabilities-title" heading="More than a spreadsheet." description="See the moving parts of a show at a glance." />
+        <x-section-heading id="capabilities-title" heading="See the night before it happens." description="The event card is where the moving parts come together. Keep the plan legible before the lights go down." />
         <div class="operations-grid">
             <div class="operations-panel" aria-label="Illustrative Ringside event card">
                 <div class="operations-panel-top"><span>RINGSIDE / EVENT CARD</span><span class="operations-status">BUILDING</span></div>
@@ -15,9 +15,14 @@
             </div>
             <div class="operations-copy">
                 <p class="operations-kicker">The work behind the bell</p>
-                <h3 class="display">Book the show. Keep the story.</h3>
+                <h3 class="display">One view. No loose ends.</h3>
                 <p>Rosters, events, matches and titles stay connected as your promotion moves from plan to result.</p>
                 <ul class="operations-list"><x-checklist-item text="One connected roster" /><x-checklist-item text="Every match card in context" /><x-checklist-item text="History that follows the title" /></ul>
+                <div class="operations-proof" aria-label="Event card summary">
+                    <div><strong>18</strong><span>active roster</span></div>
+                    <div><strong>04</strong><span>matches booked</span></div>
+                    <div><strong>01</strong><span>title on the line</span></div>
+                </div>
             </div>
         </div>
     </div>

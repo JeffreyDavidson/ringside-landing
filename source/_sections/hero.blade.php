@@ -15,9 +15,9 @@
 
 <nav class="feature-index" aria-label="Explore the features">
     <div class="page-width utility-grid grid-cols-4">
-        <a href="#roster"><span>Roster</span><x-icon.arrow-up-right /></a>
-        <a href="#events"><span>Events</span><x-icon.arrow-up-right /></a>
-        <a href="#matches"><span>Matches</span><x-icon.arrow-up-right /></a>
-        <a href="#championships"><span>Championships</span><x-icon.arrow-up-right /></a>
+        <a href="#roster"><span>Know your people</span><x-icon.arrow-up-right /></a>
+        <a href="#events"><span>Set the stage</span><x-icon.arrow-up-right /></a>
+        <a href="#matches"><span>Build the card</span><x-icon.arrow-up-right /></a>
+        <a href="#championships"><span>Keep the history</span><x-icon.arrow-up-right /></a>
     </div>
 </nav>
