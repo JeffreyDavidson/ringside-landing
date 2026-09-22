@@ -3,9 +3,10 @@
         <div><x-kicker class="mb-4">Founding access</x-kicker><x-display-heading id="closing-title" class="text-[clamp(2.6rem,4.5vw,4.5rem)]">Build the tool your promotion should have had from the start.</x-display-heading></div>
         <div>
             <p class="text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Join the founding class and help shape the way independent wrestling promotions organize their next show.</p>
-            <form class="mt-6 flex flex-wrap gap-3" onsubmit="handleWaitlist(event)" novalidate>
+            <form class="mt-6 flex flex-wrap gap-3" action="/api/waitlist.php" method="post" onsubmit="handleWaitlist(event)">
                 <label class="sr-only" for="waitlist-email">Email address</label>
                 <input class="min-h-14 min-w-0 flex-1 border border-ringside-line-bright bg-ringside-surface-card px-4 text-ringside-ink placeholder:text-ringside-muted-subtle focus:border-ringside-white focus:outline-3 focus:outline-ringside-white focus:outline-offset-2 max-[520px]:basis-full" id="waitlist-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="waitlist-status" required>
+                <input type="hidden" name="product" value="ringside">
                 <button class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-red bg-ringside-red px-7 py-3.5 text-base font-bold leading-[1.4] text-ringside-white transition-colors hover:border-ringside-red-dark hover:bg-ringside-red-dark max-[520px]:w-full" type="submit"><span data-waitlist-label>Join the founding class</span> <x-icon.arrow-up-right /></button>
             </form>
             <p class="mt-3 text-sm text-ringside-muted-subtle" id="waitlist-status" role="status" aria-live="polite">No spam. Just launch updates.</p>
