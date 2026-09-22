@@ -16,7 +16,7 @@
             <div class="max-w-lg">
                 <x-kicker class="mb-4">The work behind the bell</x-kicker>
                 <x-display-heading tag="h3" class="max-w-[12ch] text-[clamp(2.25rem,4vw,4rem)]">One view. No loose ends.</x-display-heading>
-                <p class="mt-6 text-[1.1rem] leading-[1.7] text-ringside-muted">Rosters, events, matches and titles stay connected as your promotion moves from plan to result.</p>
+                <p class="mt-6 text-[1.1rem] leading-[1.7] text-ringside-muted">Bring the people, officials and championship into view while the card is still taking shape.</p>
             </div>
             <div>
                 <div class="grid grid-cols-3 gap-4 border-t border-ringside-line pt-6" aria-label="Event card summary">

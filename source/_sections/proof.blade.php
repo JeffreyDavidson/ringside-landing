@@ -1,31 +1,29 @@
 <section class="border-y border-ringside-line bg-ringside-surface-index py-[clamp(4rem,7vw,7rem)]" aria-labelledby="proof-title">
     <x-page-width>
-        <div class="grid grid-cols-[0.9fr_1.1fr] items-start gap-16 max-[900px]:grid-cols-1 max-[900px]:gap-10">
-            <div class="max-w-xl">
-                <x-display-heading tag="h2" id="proof-title" class="max-w-[11ch] text-[clamp(2.5rem,5vw,4.75rem)]">One system changes the whole night.</x-display-heading>
-                <p class="mt-6 max-w-[42rem] text-[1.1rem] leading-[1.7] text-ringside-muted">Ringside keeps the work connected from the first booking conversation to the history you carry into the next show.</p>
+        <div class="grid grid-cols-[0.9fr_1.1fr] items-start gap-16 max-[1100px]:grid-cols-1 max-[1100px]:gap-10">
+            <div class="max-w-2xl">
+                <x-display-heading tag="h2" id="proof-title" class="max-w-[12ch] text-[clamp(2.5rem,5vw,4.75rem)]">A result should carry the whole story.</x-display-heading>
+                <p class="mt-6 max-w-[42rem] text-[1.1rem] leading-[1.7] text-ringside-muted">See how a booked match connects to its result—and how that result becomes part of championship history.</p>
             </div>
-            <div aria-label="Promoter outcomes">
-                <div class="grid grid-cols-[minmax(8rem,0.65fr)_minmax(10rem,0.9fr)_minmax(12rem,1.45fr)] gap-5 border-t border-ringside-line py-4 text-xs font-bold uppercase tracking-[0.08em] text-ringside-muted-subtle max-[640px]:grid-cols-[minmax(7rem,0.7fr)_minmax(10rem,1.3fr)] max-[640px]:gap-3">
-                    <span>Promoter moment</span>
-                    <span class="max-[640px]:hidden">Scattered work</span>
-                    <span>With Ringside</span>
-                </div>
-                <div class="grid grid-cols-[minmax(8rem,0.65fr)_minmax(10rem,0.9fr)_minmax(12rem,1.45fr)] gap-5 border-t border-ringside-line py-6 max-[640px]:grid-cols-[minmax(7rem,0.7fr)_minmax(10rem,1.3fr)] max-[640px]:gap-3">
-                    <strong class="text-ringside-signal">Find the right person</strong>
-                    <span class="text-ringside-muted max-[640px]:hidden">Checking notes and messages</span>
-                    <span>Roster context stays close to the booking.</span>
-                </div>
-                <div class="grid grid-cols-[minmax(8rem,0.65fr)_minmax(10rem,0.9fr)_minmax(12rem,1.45fr)] gap-5 border-t border-ringside-line py-6 max-[640px]:grid-cols-[minmax(7rem,0.7fr)_minmax(10rem,1.3fr)] max-[640px]:gap-3">
-                    <strong class="text-ringside-signal">Build the card</strong>
-                    <span class="text-ringside-muted max-[640px]:hidden">Rebuilding the plan in every place</span>
-                    <span>Match details and responsibilities share one plan.</span>
-                </div>
-                <div class="grid grid-cols-[minmax(8rem,0.65fr)_minmax(10rem,0.9fr)_minmax(12rem,1.45fr)] gap-5 border-y border-ringside-line py-6 max-[640px]:grid-cols-[minmax(7rem,0.7fr)_minmax(10rem,1.3fr)] max-[640px]:gap-3">
-                    <strong class="text-ringside-signal">Carry the story forward</strong>
-                    <span class="text-ringside-muted max-[640px]:hidden">Reconstructing what happened after the show</span>
-                    <span>Results and title history stay connected.</span>
-                </div>
+            <div class="min-w-0" aria-label="Illustrative match-to-history workflow">
+                <p class="border-t border-ringside-line py-4 text-xs font-bold uppercase tracking-[0.08em] text-ringside-muted-subtle">One match, from booking to record</p>
+                <ol class="grid grid-cols-3 border-y border-ringside-line max-[900px]:grid-cols-1">
+                    <li class="min-w-0 py-6 pr-6 max-[900px]:border-b max-[900px]:border-ringside-line max-[900px]:pr-0 min-[901px]:border-r min-[901px]:border-ringside-line min-[901px]:pr-5">
+                        <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Booked</span>
+                        <h3 class="mt-3 text-lg font-bold">The match card</h3>
+                        <p class="mt-2 text-base leading-relaxed text-ringside-muted min-[901px]:text-sm">Competitors, referee and championship belong to the same match.</p>
+                    </li>
+                    <li class="min-w-0 py-6 px-5 max-[900px]:border-b max-[900px]:border-ringside-line max-[900px]:px-0 min-[901px]:border-r min-[901px]:border-ringside-line">
+                        <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Completed</span>
+                        <h3 class="mt-3 text-lg font-bold">The result</h3>
+                        <p class="mt-2 text-base leading-relaxed text-ringside-muted min-[901px]:text-sm">Record the outcome against the match that was booked.</p>
+                    </li>
+                    <li class="min-w-0 py-6 pl-5 max-[900px]:pl-0">
+                        <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Carried forward</span>
+                        <h3 class="mt-3 text-lg font-bold">The title record</h3>
+                        <p class="mt-2 text-base leading-relaxed text-ringside-muted min-[901px]:text-sm">Keep championship history with the matches that shaped it.</p>
+                    </li>
+                </ol>
             </div>
         </div>
     </x-page-width>
