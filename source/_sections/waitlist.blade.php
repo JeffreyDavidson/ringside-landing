@@ -8,5 +8,10 @@
             <button class="button button-primary" type="submit">Join the founding class <x-icon.arrow-up-right /></button>
         </form>
         <p class="form-note" id="waitlist-status" aria-live="polite">No spam. Just launch updates.</p>
+        <div class="closing-meta" aria-label="Founding class details">
+            <span>Early access</span>
+            <span>Product feedback</span>
+            <span>Launch updates</span>
+        </div>
     </div>
 </section>
