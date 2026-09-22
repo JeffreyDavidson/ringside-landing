@@ -12,9 +12,7 @@ if (file_exists($envFile)) {
 }
 
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
+header('Cache-Control: no-store');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(204);
@@ -28,6 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $input = json_decode(file_get_contents('php://input'), true);
+
+if (!is_array($input)) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Invalid request']);
+    exit;
+}
+
 $email = filter_var($input['email'] ?? '', FILTER_VALIDATE_EMAIL);
 
 if (!$email) {
@@ -37,6 +42,12 @@ if (!$email) {
 }
 
 $product = $input['product'] ?? 'ringside';
+
+if ($product !== 'ringside') {
+    http_response_code(400);
+    echo json_encode(['error' => 'Invalid product']);
+    exit;
+}
 
 $apiKey = getenv('RESEND_API_KEY') ?: ($_ENV['RESEND_API_KEY'] ?? '');
 
@@ -50,13 +61,24 @@ if (!$apiKey) {
 $ch = curl_init('https://api.resend.com/audiences');
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_CONNECTTIMEOUT => 5,
+    CURLOPT_TIMEOUT => 10,
     CURLOPT_HTTPHEADER => [
         'Authorization: Bearer ' . $apiKey,
         'Content-Type: application/json',
     ],
 ]);
-$response = json_decode(curl_exec($ch), true);
+$responseBody = curl_exec($ch);
+$responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
+
+if ($responseBody === false || $responseCode < 200 || $responseCode >= 300) {
+    http_response_code(502);
+    echo json_encode(['error' => 'Waitlist service unavailable']);
+    exit;
+}
+
+$response = json_decode($responseBody, true);
 
 $audienceId = null;
 if (!empty($response['data'])) {
@@ -78,14 +100,25 @@ if (!$audienceId) {
     curl_setopt_array($ch, [
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_POST => true,
+        CURLOPT_CONNECTTIMEOUT => 5,
+        CURLOPT_TIMEOUT => 10,
         CURLOPT_HTTPHEADER => [
             'Authorization: Bearer ' . $apiKey,
             'Content-Type: application/json',
         ],
         CURLOPT_POSTFIELDS => json_encode(['name' => 'Waitlist']),
     ]);
-    $result = json_decode(curl_exec($ch), true);
+    $resultBody = curl_exec($ch);
+    $resultCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
+
+    if ($resultBody === false || $resultCode < 200 || $resultCode >= 300) {
+        http_response_code(502);
+        echo json_encode(['error' => 'Waitlist service unavailable']);
+        exit;
+    }
+
+    $result = json_decode($resultBody, true);
     $audienceId = $result['id'] ?? null;
 }
 
@@ -100,6 +133,8 @@ $ch = curl_init("https://api.resend.com/audiences/{$audienceId}/contacts");
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST => true,
+    CURLOPT_CONNECTTIMEOUT => 5,
+    CURLOPT_TIMEOUT => 10,
     CURLOPT_HTTPHEADER => [
         'Authorization: Bearer ' . $apiKey,
         'Content-Type: application/json',
@@ -118,6 +153,6 @@ curl_close($ch);
 if ($httpCode >= 200 && $httpCode < 300) {
     echo json_encode(['success' => true]);
 } else {
-    http_response_code(500);
-    echo json_encode(['error' => 'Failed to add contact', 'details' => json_decode($result, true)]);
+    http_response_code(502);
+    echo json_encode(['error' => 'Waitlist service unavailable']);
 }
