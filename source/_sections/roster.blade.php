@@ -1,6 +1,6 @@
 <section id="roster" class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] py-[clamp(4rem,7vw,7rem)] max-[767px]:w-[calc(100%-2.5rem)]" aria-labelledby="roster-title">
     <x-section-heading id="roster-title" heading="The work starts long before the bell." description="A promotion is more than the match card. Keep the people, partnerships and responsibilities behind the show in view." />
-    <div class="mt-14 grid grid-cols-[1.1fr_0.9fr] items-start gap-20 max-[900px]:grid-cols-1 max-[900px]:gap-12">
+        <div class="mt-14 grid grid-cols-[1.05fr_0.95fr] items-stretch gap-14 max-[900px]:grid-cols-1 max-[900px]:gap-12">
             <div>
                 <x-roster-row number="01" title="Know who is ready.">Keep talent profiles, employment, injuries and suspensions in view before you make the next booking.</x-roster-row>
                 <x-roster-row number="02" title="Know who belongs together.">Manage the teams, stables and alliances behind your stories, with membership history that stays connected.</x-roster-row>
