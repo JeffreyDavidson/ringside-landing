@@ -1,0 +1,11 @@
+@import "./source/css/tokens.css";
+@import "tailwindcss" source(none);
+
+@source "source/**/*.blade.php";
+
+@theme inline {
+    --color-signal: var(--color-ringside-signal);
+}
+
+/* Keep the current visual system in the compiled entry while the page migrates. */
+@import "./source/css/marketing.css";

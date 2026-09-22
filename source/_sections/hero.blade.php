@@ -14,7 +14,7 @@
 </section>
 
 <nav class="feature-index" aria-label="Explore the features">
-    <div class="page-width utility-grid grid-cols-4">
+    <div class="page-width grid grid-cols-4">
         <a href="#roster"><span>Know your people</span><x-icon.arrow-up-right /></a>
         <a href="#events"><span>Set the stage</span><x-icon.arrow-up-right /></a>
         <a href="#matches"><span>Build the card</span><x-icon.arrow-up-right /></a>

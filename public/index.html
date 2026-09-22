@@ -23,7 +23,7 @@
     <link rel="canonical" href="https://theringside.app/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Ringside — Wrestling promotion management</title>
-    <link rel="stylesheet" href="css/marketing.css">
+    <link rel="stylesheet" href="css/tailwind.css">
     <script src="https://cdn.usefathom.com/script.js" data-site="QZDCFJBS" defer></script>
     <script type="application/ld+json">
         {
@@ -42,34 +42,15 @@
             }
         }
     </script>
-    <style>
-        .utility-flex { display: flex; }
-        .utility-grid { display: grid; }
-        .items-center { align-items: center; }
-        .justify-between { justify-content: space-between; }
-        .flex-wrap { flex-wrap: wrap; }
-        .gap-3 { gap: .75rem; }
-        .gap-5 { gap: 1.25rem; }
-        .gap-6 { gap: 1.5rem; }
-        .gap-10 { gap: 2.5rem; }
-        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        .text-signal { color: var(--color-ringside-signal); }
-        @media (max-width: 760px) {
-            .md-grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .desktop-link { display: none; }
-            .page-width { width: min(100% - 2rem, 1280px); }
-        }
-    </style>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header id="top" class="site-header">
-        <div class="page-width utility-flex items-center justify-between gap-6">
+        <div class="page-width flex items-center justify-between gap-6">
             <a class="wordmark" href="#top" aria-label="Ringside home">RING<span>SIDE</span></a>
-            <nav class="utility-flex items-center gap-5" aria-label="Main navigation">
+            <nav class="flex items-center gap-5" aria-label="Main navigation">
                 <a class="nav-link" href="#roster">Features</a>
-                <a class="nav-link desktop-link" href="#how-it-works">How it works</a>
+                <a class="nav-link max-[760px]:hidden" href="#how-it-works">How it works</a>
                 <a class="button button-outline header-action" href="#waitlist">Join the founding class <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
             </nav>
@@ -94,7 +75,7 @@
 </section>
 
 <nav class="feature-index" aria-label="Explore the features">
-    <div class="page-width utility-grid grid-cols-4">
+    <div class="page-width grid grid-cols-4">
         <a href="#roster"><span>Know your people</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
         <a href="#events"><span>Set the stage</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
@@ -175,7 +156,7 @@
     <h2 id="show-title" class="display">Plan the night. Preserve the story.</h2>
     <p>Ringside follows the sequence promoters already know. Set the stage, build the card, run the night and carry the story forward.</p>
 </div>
-        <div class="show-steps utility-grid grid-cols-2">
+        <div class="show-steps grid grid-cols-2">
             <div id="events"><span class="step-kicker">Before the bell</span><svg class="icon step-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3 class="display">Set the stage.</h3><p>Organize events around your venues and dates. Keep the details of each show together as the card takes shape.</p><p class="step-detail">Events / Venues / Scheduling</p></div>
             <div id="matches"><span class="step-kicker">When the card is set</span><svg class="icon step-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5"/></svg><h3 class="display">Build the card.</h3><p>Book wrestlers and tag teams, choose match types and assign officials. Record results when the match is done.</p><p class="step-detail">Competitors / Match types / Results</p></div>
         </div>
@@ -242,8 +223,8 @@
     </main>
 
     <footer class="site-footer">
-        <div class="page-width utility-flex flex-wrap items-center justify-between gap-6">
-            <div class="utility-flex flex-wrap items-center gap-5"><a class="wordmark" href="#top" aria-label="Ringside home">RING<span>SIDE</span></a>
+        <div class="page-width flex flex-wrap items-center justify-between gap-6">
+            <div class="flex flex-wrap items-center gap-5"><a class="wordmark" href="#top" aria-label="Ringside home">RING<span>SIDE</span></a>
 <p>© 2026 Ringside. Wrestling promotion management.</p></div>
             <a class="footer-link" href="#top">Back to top <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14"/></svg></a>
         </div>

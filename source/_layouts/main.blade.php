@@ -23,7 +23,7 @@
     <link rel="canonical" href="https://theringside.app/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>{{ $page->title }}</title>
-    <link rel="stylesheet" href="css/marketing.css">
+    <link rel="stylesheet" href="css/tailwind.css">
     <script src="https://cdn.usefathom.com/script.js" data-site="QZDCFJBS" defer></script>
     <script type="application/ld+json">
         {
@@ -42,34 +42,15 @@
             }
         }
     </script>
-    <style>
-        .utility-flex { display: flex; }
-        .utility-grid { display: grid; }
-        .items-center { align-items: center; }
-        .justify-between { justify-content: space-between; }
-        .flex-wrap { flex-wrap: wrap; }
-        .gap-3 { gap: .75rem; }
-        .gap-5 { gap: 1.25rem; }
-        .gap-6 { gap: 1.5rem; }
-        .gap-10 { gap: 2.5rem; }
-        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        .text-signal { color: var(--color-ringside-signal); }
-        @media (max-width: 760px) {
-            .md-grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .desktop-link { display: none; }
-            .page-width { width: min(100% - 2rem, 1280px); }
-        }
-    </style>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header id="top" class="site-header">
-        <div class="page-width utility-flex items-center justify-between gap-6">
+        <div class="page-width flex items-center justify-between gap-6">
             <x-wordmark />
-            <nav class="utility-flex items-center gap-5" aria-label="Main navigation">
+            <nav class="flex items-center gap-5" aria-label="Main navigation">
                 <a class="nav-link" href="#roster">Features</a>
-                <a class="nav-link desktop-link" href="#how-it-works">How it works</a>
+                <a class="nav-link max-[760px]:hidden" href="#how-it-works">How it works</a>
                 <a class="button button-outline header-action" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
             </nav>
         </div>
@@ -80,8 +61,8 @@
     </main>
 
     <footer class="site-footer">
-        <div class="page-width utility-flex flex-wrap items-center justify-between gap-6">
-            <div class="utility-flex flex-wrap items-center gap-5"><x-wordmark /><p>© 2026 Ringside. Wrestling promotion management.</p></div>
+        <div class="page-width flex flex-wrap items-center justify-between gap-6">
+            <div class="flex flex-wrap items-center gap-5"><x-wordmark /><p>© 2026 Ringside. Wrestling promotion management.</p></div>
             <a class="footer-link" href="#top">Back to top <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14"/></svg></a>
         </div>
     </footer>
