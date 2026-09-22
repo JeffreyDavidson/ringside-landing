@@ -32,3 +32,21 @@ The waitlist endpoint requires both `RESEND_API_KEY` and an explicit
 `RESEND_AUDIENCE_ID`. Production and staging must use different Resend
 audiences so test signups cannot enter the production list. Keep both values in
 the Forge environment only; never commit them to the repository.
+
+## Launch-readiness checks
+
+Run these checks after a production deployment:
+
+1. Confirm the production homepage returns `200` and includes the current hero.
+2. Confirm production is served through Cloudflare and has a valid HTTPS response.
+3. Confirm staging returns the expected Cloudflare Access redirect (`302`) when
+   checked without an authenticated browser session.
+4. Submit one controlled waitlist signup in staging and one in production, then
+   verify each contact appears in its matching Resend audience.
+5. Confirm the scheduled [marketing-site uptime workflow](../.github/workflows/uptime.yml)
+   remains green. It checks the production homepage and the waitlist endpoint's
+   safe `OPTIONS` response every 15 minutes.
+
+Do not treat a staging `302` as an outage; staging is intentionally protected by
+Cloudflare Access. Use an authenticated browser session for staging UI and
+signup verification.
