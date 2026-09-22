@@ -72,20 +72,35 @@
             event.preventDefault();
             const form = event.currentTarget;
             const button = form.querySelector('button');
+            const label = button.querySelector('[data-waitlist-label]');
             const status = document.getElementById('waitlist-status');
+            const email = form.elements.email.value.trim();
+
+            if (!form.reportValidity()) {
+                return;
+            }
+
             button.disabled = true;
-            button.textContent = 'Joining…';
+            button.setAttribute('aria-busy', 'true');
+            label.textContent = 'Joining…';
+            status.textContent = 'Saving your email…';
+            status.classList.remove('text-ringside-signal');
             try {
-                const response = await fetch('/api/waitlist.php', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ email: form.email.value, product: 'ringside' }) });
+                const response = await fetch('/api/waitlist.php', { method: 'POST', headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}, body: JSON.stringify({ email, product: 'ringside' }) });
                 const result = await response.json();
                 if (!response.ok || !result.success) throw new Error('Unable to join');
                 form.reset();
                 status.textContent = "You're on the list. We'll be in touch.";
-                button.textContent = 'You’re in';
+                status.classList.add('text-ringside-signal');
+                label.textContent = 'You’re in';
+                button.removeAttribute('aria-busy');
+                window.fathom?.trackEvent('waitlist_submitted');
             } catch {
                 status.textContent = 'We could not save that email. Please try again.';
-                button.textContent = 'Try again';
+                status.classList.add('text-ringside-signal');
+                label.textContent = 'Try again';
                 button.disabled = false;
+                button.removeAttribute('aria-busy');
             }
         }
     </script>
