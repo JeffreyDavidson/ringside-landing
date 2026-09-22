@@ -13,13 +13,16 @@ description: Manage your wrestling roster, plan events, build match cards and ke
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://theringside.app/">
     <meta property="og:site_name" content="Ringside">
-    <meta property="og:image" content="https://theringside.app/images/marketing/arena.webp">
-    <meta property="og:image:alt" content="A wrestling arena ready for the next show">
+    <meta property="og:image" content="https://theringside.app/images/marketing/ringside-social-v1.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ringside — Run the show. Own the story. Wrestling promotion management, with a red-roped wrestling ring in a dark arena.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $page->title }}">
     <meta name="twitter:description" content="{{ $page->description }}">
-    <meta name="twitter:image" content="https://theringside.app/images/marketing/arena.webp">
-    <meta name="twitter:image:alt" content="A wrestling arena ready for the next show">
+    <meta name="twitter:image" content="https://theringside.app/images/marketing/ringside-social-v1.jpg">
+    <meta name="twitter:image:alt" content="Ringside — Run the show. Own the story. Wrestling promotion management, with a red-roped wrestling ring in a dark arena.">
     <meta name="theme-color" content="#101112">
     <link rel="canonical" href="https://theringside.app/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
