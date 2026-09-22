@@ -12,10 +12,10 @@
             </div>
             <div class="flex items-center gap-4 border-t border-ringside-line px-5 py-4 text-[0.7rem] font-bold tracking-[0.1em] text-ringside-muted-subtle"><span>VENUE</span><strong class="mr-auto text-[0.7rem] tracking-[0.08em] text-ringside-ink">Harbor Hall</strong><span>ROSTER</span><strong class="text-[0.7rem] tracking-[0.08em] text-ringside-ink">18 ACTIVE</strong></div>
         </div>
-        <div class="mt-12 grid grid-cols-[0.85fr_1.15fr] items-start gap-20 max-[900px]:grid-cols-1 max-[900px]:gap-10">
-            <div class="max-w-md">
+        <div class="mt-12 grid grid-cols-[1fr_1.15fr] items-start gap-14 max-[900px]:grid-cols-1 max-[900px]:gap-10">
+            <div class="max-w-lg">
                 <x-kicker class="mb-4">The work behind the bell</x-kicker>
-                <x-display-heading tag="h3" class="max-w-[9ch] text-[clamp(2.25rem,4vw,4rem)]">One view. No loose ends.</x-display-heading>
+                <x-display-heading tag="h3" class="max-w-[12ch] text-[clamp(2.25rem,4vw,4rem)]">One view. No loose ends.</x-display-heading>
                 <p class="mt-6 text-[1.1rem] leading-[1.7] text-ringside-muted">Rosters, events, matches and titles stay connected as your promotion moves from plan to result.</p>
             </div>
             <div>
@@ -31,6 +31,5 @@
                 </div>
             </div>
         </div>
-        <ul class="mt-12 grid grid-cols-3 gap-8 border-t border-ringside-line max-[767px]:grid-cols-1 max-[767px]:gap-0"><x-checklist-item text="One connected roster" /><x-checklist-item text="Every match card in context" /><x-checklist-item text="History that follows the title" /></ul>
     </x-page-width>
 </section>
