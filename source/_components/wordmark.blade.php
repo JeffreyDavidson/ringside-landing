@@ -1,1 +1,1 @@
-<a class="wordmark" href="#top" aria-label="Ringside home">RING<span>SIDE</span></a>
+<a class="inline-block font-display text-[2.75rem] font-normal uppercase leading-none tracking-[-0.035em]" href="#top" aria-label="Ringside home">RING<span class="text-ringside-signal">SIDE</span></a>
