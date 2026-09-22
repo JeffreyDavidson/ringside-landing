@@ -271,6 +271,7 @@ summary svg {
 }
 
 .feature-index a {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -330,7 +331,7 @@ summary svg {
 
 .roster-row {
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
+    grid-template-columns: 3rem 1fr 1.15fr;
     gap: 2rem;
     align-items: center;
     padding-block: 2rem;
@@ -343,6 +344,15 @@ summary svg {
 
 .roster-row h3 {
     font-size: clamp(1.65rem, 2.8vw, 2.3rem);
+}
+
+.roster-number {
+    align-self: start;
+    padding-top: 0.35rem;
+    color: var(--color-ringside-signal);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
 .roster-row p {
@@ -367,6 +377,16 @@ summary svg {
 .show-steps > div {
     border-top: 1px solid var(--color-ringside-white-half);
     padding-top: 2rem;
+}
+
+.step-kicker {
+    display: block;
+    margin-bottom: 2rem;
+    color: var(--color-ringside-signal-soft);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .step-icon {
@@ -593,6 +613,37 @@ summary svg {
     width: 1.1rem;
     height: 1.1rem;
     color: var(--color-ringside-signal);
+}
+
+.operations-proof {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-ringside-line);
+}
+
+.operations-proof div {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.operations-proof strong {
+    color: var(--color-ringside-signal);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.operations-proof span {
+    color: var(--color-ringside-muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    text-transform: uppercase;
 }
 
 .capabilities-grid {
@@ -928,12 +979,24 @@ summary::-webkit-details-marker {
         padding-block: 1.5rem;
     }
 
+    .roster-number {
+        padding-top: 0;
+    }
+
     .show-steps {
         margin-top: 2.5rem;
     }
 
     .operations-grid {
         gap: 2.5rem;
+    }
+
+    .operations-proof {
+        gap: 0.75rem;
+    }
+
+    .operations-proof strong {
+        font-size: 1.75rem;
     }
 
     .operations-matches > div {
