@@ -1,3 +1,15 @@
-.env
+/\.env
 public/assets/
+/build_local/
+/cache/
+/node_modules/
 /vendor/
+/.idea/
+/.vscode/
+npm-debug.log
+hot
+
+# Optional ignores
+# /build_staging/
+# /build_production/
+# /source/assets/build/
