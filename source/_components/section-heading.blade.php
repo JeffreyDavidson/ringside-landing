@@ -1,6 +1,6 @@
 @props(['id', 'heading', 'description'])
 
 <div class="section-heading">
-    <h2 id="{{ $id }}" class="display">{{ $heading }}</h2>
+    <x-display-heading id="{{ $id }}" class="text-[clamp(2.6rem,4.5vw,4.5rem)]">{{ $heading }}</x-display-heading>
     <p>{{ $description }}</p>
 </div>

@@ -8,10 +8,17 @@ Install PHP dependencies and build the site with:
 
 ```bash
 composer install
+npm ci
+npm run build
 vendor/bin/jigsaw build production
 ```
 
 The generated site is written to `public/`.
+
+Tailwind 4 is the CSS build entry. Brand tokens live in the `@theme` block at the
+top of `source/css/marketing.css`; the Blade markup and section styles are migrating
+to Tailwind utilities in focused passes. The generated `source/css/tailwind.css`
+file remains checked in so Jigsaw and local static previews have the same output.
 
 The homepage is composed from `source/_layouts/main.blade.php`, section partials
 in `source/_sections/`, and small anonymous components in `source/_components/`.
