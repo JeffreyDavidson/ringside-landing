@@ -131,13 +131,13 @@ The palette is deliberately narrow. Red carries action and emphasis; neutral gra
 
 Use a centered content rail: `width: min(100% - 6rem, 1280px)`. Full-bleed hero imagery and section backgrounds may extend beyond the rail, while text and controls stay aligned to it.
 
-Sections use generous vertical padding, normally `clamp(4rem, 7vw, 7rem)`. Desktop layouts favor two-column editorial compositions such as `1.25fr 1fr`, with a `6rem` gap when space allows. Feature indexes and metadata rows use thin vertical rules. At the mobile breakpoint around `760px`, collapse columns, reduce the page gutter to about `1rem`, and preserve the display hierarchy rather than shrinking every element proportionally.
+Sections use generous vertical padding, normally `clamp(4rem, 7vw, 7rem)`. Desktop layouts favor two-column editorial compositions such as `1.25fr 1fr`, with a `6rem` gap when space allows. Section headings use a stacked reading path rather than a split heading/explainer header. The hero is sized against the viewport so its action row remains visible on desktop. Feature indexes and metadata rows use thin vertical rules, with a signal-red leading cell as a navigation cue. At the mobile breakpoint around `760px`, collapse columns, reduce the page gutter to about `1rem`, preserve the display hierarchy rather than shrinking every element proportionally, and switch the feature index to two columns.
 
 Keep a clear reading path: one dominant statement, one supporting paragraph, and one obvious action per decision area. Use `text-wrap: balance` for display headings and `text-wrap: pretty` for supporting copy.
 
 ## Elevation & Depth
 
-The system is flat by default. Depth comes from tonal layering, photography, scrims, rules, and spacing rather than floating cards. The only routine shadow is a restrained red glow under the primary hero action (`0 12px 30px rgb(203 32 40 / 24%)`). Avoid generic gray drop shadows and glass effects.
+The system is flat by default. Depth comes from tonal layering, photography, scrims, rules, and spacing rather than floating cards. The only routine shadow is a restrained red glow under the primary hero action (`0 12px 30px rgb(203 32 40 / 24%)`). The event-card preview uses a signal-red top rule and internal dividers instead of a drop shadow. Avoid generic gray drop shadows and glass effects.
 
 ## Shapes
 
@@ -165,6 +165,11 @@ Controls are square and decisive: buttons, rows, and panels use no radius. The f
 - Apply a dark left-to-right scrim so the headline remains readable.
 - Keep the title to two short lines; highlight only the second line with Signal red.
 - Place the badge, title, description, and actions in one vertical reading path.
+
+### Workflow and operations
+
+- The workflow section uses a red-to-deep-red tonal field, thin white rules, and short signal-red rules above the numbered sequence to make the operational path feel like a production board.
+- The capabilities preview is an open event-card panel, not a simulated dashboard. A signal-red top rule, match dividers, and a checklist establish hierarchy without card nesting.
 
 ### Feature index and rows
 
