@@ -50,81 +50,11 @@ if ($product !== 'ringside') {
 }
 
 $apiKey = getenv('RESEND_API_KEY') ?: ($_ENV['RESEND_API_KEY'] ?? '');
+$audienceId = getenv('RESEND_AUDIENCE_ID') ?: ($_ENV['RESEND_AUDIENCE_ID'] ?? '');
 
-if (!$apiKey) {
+if (!$apiKey || !$audienceId) {
     http_response_code(500);
-    echo json_encode(['error' => 'API key not configured']);
-    exit;
-}
-
-// First, ensure we have an audience. We'll create contacts directly.
-$ch = curl_init('https://api.resend.com/audiences');
-curl_setopt_array($ch, [
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_CONNECTTIMEOUT => 5,
-    CURLOPT_TIMEOUT => 10,
-    CURLOPT_HTTPHEADER => [
-        'Authorization: Bearer ' . $apiKey,
-        'Content-Type: application/json',
-    ],
-]);
-$responseBody = curl_exec($ch);
-$responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-curl_close($ch);
-
-if ($responseBody === false || $responseCode < 200 || $responseCode >= 300) {
-    http_response_code(502);
-    echo json_encode(['error' => 'Waitlist service unavailable']);
-    exit;
-}
-
-$response = json_decode($responseBody, true);
-
-$audienceId = null;
-if (!empty($response['data'])) {
-    foreach ($response['data'] as $audience) {
-        if (stripos($audience['name'], 'waitlist') !== false || stripos($audience['name'], 'Ringside') !== false) {
-            $audienceId = $audience['id'];
-            break;
-        }
-    }
-    // Fall back to first audience
-    if (!$audienceId) {
-        $audienceId = $response['data'][0]['id'] ?? null;
-    }
-}
-
-// If no audience exists, create one
-if (!$audienceId) {
-    $ch = curl_init('https://api.resend.com/audiences');
-    curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_POST => true,
-        CURLOPT_CONNECTTIMEOUT => 5,
-        CURLOPT_TIMEOUT => 10,
-        CURLOPT_HTTPHEADER => [
-            'Authorization: Bearer ' . $apiKey,
-            'Content-Type: application/json',
-        ],
-        CURLOPT_POSTFIELDS => json_encode(['name' => 'Waitlist']),
-    ]);
-    $resultBody = curl_exec($ch);
-    $resultCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
-
-    if ($resultBody === false || $resultCode < 200 || $resultCode >= 300) {
-        http_response_code(502);
-        echo json_encode(['error' => 'Waitlist service unavailable']);
-        exit;
-    }
-
-    $result = json_decode($resultBody, true);
-    $audienceId = $result['id'] ?? null;
-}
-
-if (!$audienceId) {
-    http_response_code(500);
-    echo json_encode(['error' => 'Could not find or create audience']);
+    echo json_encode(['error' => 'Waitlist service not configured']);
     exit;
 }
 
