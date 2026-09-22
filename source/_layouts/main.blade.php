@@ -54,7 +54,7 @@
         .gap-10 { gap: 2.5rem; }
         .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        .text-signal { color: var(--color-signal); }
+        .text-signal { color: var(--color-ringside-signal); }
         @media (max-width: 760px) {
             .md-grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .desktop-link { display: none; }
@@ -70,7 +70,7 @@
             <nav class="utility-flex items-center gap-5" aria-label="Main navigation">
                 <a class="nav-link" href="#roster">Features</a>
                 <a class="nav-link desktop-link" href="#how-it-works">How it works</a>
-                <a class="button button-outline header-action" href="#waitlist">Join the waitlist <x-icon.arrow-up-right /></a>
+                <a class="button button-outline header-action" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
             </nav>
         </div>
     </header>

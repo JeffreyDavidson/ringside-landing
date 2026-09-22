@@ -54,7 +54,7 @@
         .gap-10 { gap: 2.5rem; }
         .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        .text-signal { color: var(--color-signal); }
+        .text-signal { color: var(--color-ringside-signal); }
         @media (max-width: 760px) {
             .md-grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .desktop-link { display: none; }
@@ -70,7 +70,7 @@
             <nav class="utility-flex items-center gap-5" aria-label="Main navigation">
                 <a class="nav-link" href="#roster">Features</a>
                 <a class="nav-link desktop-link" href="#how-it-works">How it works</a>
-                <a class="button button-outline header-action" href="#waitlist">Join the waitlist <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+                <a class="button button-outline header-action" href="#waitlist">Join the founding class <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
             </nav>
         </div>
@@ -85,7 +85,7 @@
         <h1 id="hero-title" class="display hero-title"><span>Run the show.</span><span class="text-signal">Own the story.</span></h1>
         <p class="hero-description">Wrestling promotion management. Your roster, match cards and championship history, together.</p>
         <div class="hero-actions">
-            <a class="button button-primary" href="#waitlist">Get early access <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            <a class="button button-primary" href="#waitlist">Join the founding class <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
             <a class="button button-outline" href="#capabilities">Explore Ringside <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg></a>
         </div>
@@ -105,39 +105,10 @@
 </a>
     </div>
 </nav>
-    <section id="roster" class="section-pad page-width" aria-labelledby="roster-title">
-    <div class="section-heading">
-    <h2 id="roster-title" class="display">The work starts long before the bell.</h2>
-    <p>A promotion is more than the match card. Keep the people, partnerships and responsibilities behind the show in view.</p>
-</div>
-    <div class="roster-list">
-        <div class="roster-row"><span class="roster-number">01</span><h3 class="display">Know who is ready.</h3><p>Keep talent profiles, employment, injuries and suspensions in view before you make the next booking.</p></div>
-        <div class="roster-row"><span class="roster-number">02</span><h3 class="display">Know who belongs together.</h3><p>Manage the teams, stables and alliances behind your stories, with membership history that stays connected.</p></div>
-        <div class="roster-row"><span class="roster-number">03</span><h3 class="display">Give every role a place.</h3><p>Keep managers and officials alongside your wrestling roster, so the people outside the ropes are part of the plan.</p></div>
-    </div>
-</section>
-    <section id="how-it-works" class="show-section section-pad" aria-labelledby="show-title">
-    <div class="page-width">
-        <div class="section-heading">
-    <h2 id="show-title" class="display">A show, from first booking to final bell.</h2>
-    <p>Ringside follows the sequence promoters already know. Set the stage, build the card, run the night and carry the story forward.</p>
-</div>
-        <div class="show-steps utility-grid grid-cols-2">
-            <div id="events"><span class="step-kicker">Before the bell</span><svg class="icon step-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3 class="display">Set the stage.</h3><p>Organize events around your venues and dates. Keep the details of each show together as the card takes shape.</p><p class="step-detail">Events / Venues / Scheduling</p></div>
-            <div id="matches"><span class="step-kicker">When the card is set</span><svg class="icon step-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5"/></svg><h3 class="display">Build the card.</h3><p>Book wrestlers and tag teams, choose match types and assign officials. Record results when the match is done.</p><p class="step-detail">Competitors / Match types / Results</p></div>
-        </div>
-        <div class="workflow-steps">
-            <div class="workflow-step"><span class="workflow-number">01</span><h3 class="display">Create your promotion</h3><p>Create an account and open your Ringside workspace.</p></div>
-            <div class="workflow-step"><span class="workflow-number">02</span><h3 class="display">Build your roster</h3><p>Add your wrestlers, teams, stables, managers and referees.</p></div>
-            <div class="workflow-step"><span class="workflow-number">03</span><h3 class="display">Book your show</h3><p>Create an event, build the card and assign the people behind it.</p></div>
-            <div class="workflow-step"><span class="workflow-number">04</span><h3 class="display">Run the business</h3><p>Record results and keep your promotion’s history moving forward.</p></div>
-        </div>
-    </div>
-</section>
     <section id="capabilities" class="capabilities-section section-pad" aria-labelledby="capabilities-title">
     <div class="page-width">
         <div class="section-heading">
-    <h2 id="capabilities-title" class="display">See the night before it happens.</h2>
+    <h2 id="capabilities-title" class="display">See the show before the bell.</h2>
     <p>The event card is where the moving parts come together. Keep the plan legible before the lights go down.</p>
 </div>
         <div class="operations-grid">
@@ -168,7 +139,51 @@
                     <div><strong>04</strong><span>matches booked</span></div>
                     <div><strong>01</strong><span>title on the line</span></div>
                 </div>
+                <div class="operations-beats" aria-label="Show lifecycle">
+                    <div><span>Before</span><strong>Roster locked</strong></div>
+                    <div><span>During</span><strong>Card in context</strong></div>
+                    <div><span>After</span><strong>History updated</strong></div>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
+    <section id="roster" class="section-pad page-width" aria-labelledby="roster-title">
+    <div class="section-heading">
+    <h2 id="roster-title" class="display">The work starts long before the bell.</h2>
+    <p>A promotion is more than the match card. Keep the people, partnerships and responsibilities behind the show in view.</p>
+</div>
+    <div class="roster-layout">
+        <div class="roster-list">
+            <div class="roster-row"><span class="roster-number">01</span><h3 class="display">Know who is ready.</h3><p>Keep talent profiles, employment, injuries and suspensions in view before you make the next booking.</p></div>
+            <div class="roster-row"><span class="roster-number">02</span><h3 class="display">Know who belongs together.</h3><p>Manage the teams, stables and alliances behind your stories, with membership history that stays connected.</p></div>
+            <div class="roster-row"><span class="roster-number">03</span><h3 class="display">Give every role a place.</h3><p>Keep managers and officials alongside your wrestling roster, so the people outside the ropes are part of the plan.</p></div>
+        </div>
+        <div class="roster-board" aria-label="Illustrative Ringside roster view">
+            <div class="roster-board-top"><span>RINGSIDE / ROSTER</span><strong>18 ACTIVE</strong></div>
+            <div class="roster-board-row"><span>01</span><strong>Jordan Vale</strong><em>Available</em></div>
+            <div class="roster-board-row"><span>02</span><strong>The Northside Boys</strong><em>Tag team</em></div>
+            <div class="roster-board-row"><span>03</span><strong>Riley Hart</strong><em>Manager</em></div>
+            <div class="roster-board-row"><span>04</span><strong>Chris Moreno</strong><em>Referee</em></div>
+            <div class="roster-board-bottom"><span>TEAMS 03</span><span>OFFICIALS 02</span><span>STATUS CURRENT</span></div>
+        </div>
+    </div>
+</section>
+    <section id="how-it-works" class="show-section section-pad" aria-labelledby="show-title">
+    <div class="page-width">
+        <div class="section-heading">
+    <h2 id="show-title" class="display">Plan the night. Preserve the story.</h2>
+    <p>Ringside follows the sequence promoters already know. Set the stage, build the card, run the night and carry the story forward.</p>
+</div>
+        <div class="show-steps utility-grid grid-cols-2">
+            <div id="events"><span class="step-kicker">Before the bell</span><svg class="icon step-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3 class="display">Set the stage.</h3><p>Organize events around your venues and dates. Keep the details of each show together as the card takes shape.</p><p class="step-detail">Events / Venues / Scheduling</p></div>
+            <div id="matches"><span class="step-kicker">When the card is set</span><svg class="icon step-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5"/></svg><h3 class="display">Build the card.</h3><p>Book wrestlers and tag teams, choose match types and assign officials. Record results when the match is done.</p><p class="step-detail">Competitors / Match types / Results</p></div>
+        </div>
+        <div class="workflow-steps">
+            <div class="workflow-step"><span class="workflow-number">01</span><h3 class="display">Create your promotion</h3><p>Create an account and open your Ringside workspace.</p></div>
+            <div class="workflow-step"><span class="workflow-number">02</span><h3 class="display">Build your roster</h3><p>Add your wrestlers, teams, stables, managers and referees.</p></div>
+            <div class="workflow-step"><span class="workflow-number">03</span><h3 class="display">Book your show</h3><p>Create an event, build the card and assign the people behind it.</p></div>
+            <div class="workflow-step"><span class="workflow-number">04</span><h3 class="display">Run the business</h3><p>Record results and keep your promotion’s history moving forward.</p></div>
         </div>
     </div>
 </section>
@@ -213,7 +228,7 @@
         <form class="waitlist-form" onsubmit="handleWaitlist(event)">
             <label class="sr-only" for="waitlist-email">Email address</label>
             <input id="waitlist-email" name="email" type="email" placeholder="you@example.com" required>
-            <button class="button button-primary" type="submit">Join the waitlist <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            <button class="button button-primary" type="submit">Join the founding class <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </button>
         </form>
         <p class="form-note" id="waitlist-status" aria-live="polite">No spam. Just launch updates.</p>

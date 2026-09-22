@@ -329,6 +329,18 @@ summary svg {
     margin-top: 3.5rem;
 }
 
+.roster-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 3.5rem;
+}
+
+.roster-layout .roster-list {
+    margin-top: 0;
+}
+
 .roster-row {
     display: grid;
     grid-template-columns: 3rem 1fr 1.15fr;
@@ -353,6 +365,63 @@ summary svg {
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
+}
+
+.roster-board {
+    overflow: hidden;
+    border: 1px solid var(--color-ringside-line-card);
+    border-top: 3px solid var(--color-ringside-signal);
+    background: var(--color-ringside-surface-card);
+}
+
+.roster-board-top,
+.roster-board-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    color: var(--color-ringside-muted-subtle);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.roster-board-top {
+    border-bottom: 1px solid var(--color-ringside-line);
+}
+
+.roster-board-top strong {
+    color: var(--color-ringside-signal-soft);
+}
+
+.roster-board-row {
+    display: grid;
+    grid-template-columns: 2rem 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--color-ringside-line);
+}
+
+.roster-board-row span {
+    color: var(--color-ringside-signal);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.roster-board-row strong {
+    font-size: 0.95rem;
+}
+
+.roster-board-row em {
+    color: var(--color-ringside-muted);
+    font-size: 0.75rem;
+    font-style: normal;
+}
+
+.roster-board-bottom {
+    gap: 0.75rem;
+    border-top: 1px solid var(--color-ringside-line);
 }
 
 .roster-row p {
@@ -644,6 +713,33 @@ summary svg {
     letter-spacing: 0.06em;
     line-height: 1.3;
     text-transform: uppercase;
+}
+
+.operations-beats {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+}
+
+.operations-beats div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-ringside-line);
+}
+
+.operations-beats span {
+    color: var(--color-ringside-signal);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.operations-beats strong {
+    font-size: 0.9rem;
 }
 
 .capabilities-grid {
@@ -954,6 +1050,7 @@ summary::-webkit-details-marker {
         height: 1rem;
     }
 
+    .roster-layout,
     .operations-grid,
     .championship-section,
     .faq-layout,
@@ -971,6 +1068,15 @@ summary::-webkit-details-marker {
 
     .roster-list {
         margin-top: 2.5rem;
+    }
+
+    .roster-layout {
+        gap: 2.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .roster-layout .roster-list {
+        margin-top: 0;
     }
 
     .roster-row {
@@ -997,6 +1103,19 @@ summary::-webkit-details-marker {
 
     .operations-proof strong {
         font-size: 1.75rem;
+    }
+
+    .roster-board-row {
+        grid-template-columns: 1.5rem 1fr;
+    }
+
+    .roster-board-row em {
+        grid-column: 2;
+    }
+
+    .roster-board-bottom {
+        flex-wrap: wrap;
+        font-size: 0.625rem;
     }
 
     .operations-matches > div {

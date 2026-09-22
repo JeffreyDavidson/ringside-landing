@@ -6,7 +6,7 @@
         <h1 id="hero-title" class="display hero-title"><span>Run the show.</span><span class="text-signal">Own the story.</span></h1>
         <p class="hero-description">Wrestling promotion management. Your roster, match cards and championship history, together.</p>
         <div class="hero-actions">
-            <a class="button button-primary" href="#waitlist">Get early access <x-icon.arrow-up-right /></a>
+            <a class="button button-primary" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
             <a class="button button-outline" href="#capabilities">Explore Ringside <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg></a>
         </div>
         <p class="hero-note">Built for the work behind the bell.</p>

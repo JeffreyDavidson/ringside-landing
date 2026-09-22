@@ -1,6 +1,6 @@
 <section id="capabilities" class="capabilities-section section-pad" aria-labelledby="capabilities-title">
     <div class="page-width">
-        <x-section-heading id="capabilities-title" heading="See the night before it happens." description="The event card is where the moving parts come together. Keep the plan legible before the lights go down." />
+        <x-section-heading id="capabilities-title" heading="See the show before the bell." description="The event card is where the moving parts come together. Keep the plan legible before the lights go down." />
         <div class="operations-grid">
             <div class="operations-panel" aria-label="Illustrative Ringside event card">
                 <div class="operations-panel-top"><span>RINGSIDE / EVENT CARD</span><span class="operations-status">BUILDING</span></div>
@@ -22,6 +22,11 @@
                     <div><strong>18</strong><span>active roster</span></div>
                     <div><strong>04</strong><span>matches booked</span></div>
                     <div><strong>01</strong><span>title on the line</span></div>
+                </div>
+                <div class="operations-beats" aria-label="Show lifecycle">
+                    <div><span>Before</span><strong>Roster locked</strong></div>
+                    <div><span>During</span><strong>Card in context</strong></div>
+                    <div><span>After</span><strong>History updated</strong></div>
                 </div>
             </div>
         </div>
