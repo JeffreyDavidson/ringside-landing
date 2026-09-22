@@ -9,6 +9,7 @@ extends: _layouts.main
     @include('_sections.capabilities')
     @include('_sections.roster')
     @include('_sections.how-it-works')
+    @include('_sections.proof')
     @include('_sections.bridge-cta')
     @include('_sections.championships')
     @include('_sections.faq')
