@@ -10,13 +10,39 @@ description: Manage your wrestling roster, plan events, build match cards and ke
     <meta name="description" content="{{ $page->description }}">
     <meta property="og:title" content="{{ $page->title }}">
     <meta property="og:description" content="{{ $page->description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theringside.app/">
+    <meta property="og:site_name" content="Ringside">
     <meta property="og:image" content="https://theringside.app/images/marketing/arena.webp">
+    <meta property="og:image:alt" content="A wrestling arena ready for the next show">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $page->title }}">
+    <meta name="twitter:description" content="{{ $page->description }}">
+    <meta name="twitter:image" content="https://theringside.app/images/marketing/arena.webp">
+    <meta name="twitter:image:alt" content="A wrestling arena ready for the next show">
     <meta name="theme-color" content="#101112">
     <link rel="canonical" href="https://theringside.app/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>{{ $page->title }}</title>
     <link rel="stylesheet" href="css/marketing.css">
     <script src="https://cdn.usefathom.com/script.js" data-site="QZDCFJBS" defer></script>
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "SoftwareApplication",
+            "name": "Ringside",
+            "url": "https://theringside.app/",
+            "description": "{{ $page->description }}",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "image": "https://theringside.app/images/marketing/arena.webp",
+            "publisher": {
+                "@@type": "Organization",
+                "name": "Ringside",
+                "url": "https://theringside.app/"
+            }
+        }
+    </script>
     <style>
         .utility-flex { display: flex; }
         .utility-grid { display: grid; }
