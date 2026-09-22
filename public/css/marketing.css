@@ -647,6 +647,11 @@ summary::-webkit-details-marker {
     transform: rotate(45deg);
 }
 
+.faq-list details[open] summary span {
+    display: inline-block;
+    transform: rotate(45deg);
+}
+
 .faq-list details p {
     padding-bottom: 1.5rem;
     padding-right: 3rem;

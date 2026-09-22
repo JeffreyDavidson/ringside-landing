@@ -13,6 +13,11 @@ vendor/bin/jigsaw build production
 
 The generated site is written to `public/`.
 
+The homepage is composed from `source/_layouts/main.blade.php`, section partials
+in `source/_sections/`, and small anonymous components in `source/_components/`.
+The generated `public/` output remains checked in and should be rebuilt after
+source changes.
+
 ## Deployment
 
 The repository uses a simplified Gitflow strategy with `main` as the only deployment branch. Work should be completed on a focused branch and merged into `main` through a squash-merged pull request.
