@@ -3,6 +3,7 @@ public/assets/
 /build_local/
 /cache/
 /node_modules/
+/source/css/tailwind-*.css
 /vendor/
 /.idea/
 /.vscode/

@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../../app/waitlist-rate-limiter.php';
+
 // Load .env from project root
 $envFile = __DIR__ . '/../../.env';
 if (file_exists($envFile)) {
@@ -34,6 +36,7 @@ function respond(int $status, bool $success, bool $expectsHtml, string $message)
     $escapedMessage = htmlspecialchars($message, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
     $destination = $success ? '/#top' : '/#waitlist';
     $linkLabel = $success ? 'Back to Ringside' : 'Return to signup';
+    $cssVersion = substr(hash_file('sha256', __DIR__ . '/../css/tailwind.css'), 0, 16);
 
     echo <<<HTML
         <!doctype html>
@@ -43,7 +46,7 @@ function respond(int $status, bool $success, bool $expectsHtml, string $message)
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="theme-color" content="#101112">
             <title>{$escapedTitle} | Ringside</title>
-            <link rel="stylesheet" href="/css/tailwind.css">
+            <link rel="stylesheet" href="/css/tailwind-{$cssVersion}.css">
         </head>
         <body>
             <main class="mx-auto grid min-h-screen w-[calc(100%-2.5rem)] max-w-[80rem] content-center gap-6 py-12 sm:w-[calc(100%-6rem)]">
@@ -87,11 +90,36 @@ if ($product !== 'ringside') {
     respond(400, false, $expectsHtml, 'We couldn’t process that signup. Please return to the form and try again.');
 }
 
+$website = $input['website'] ?? '';
+
+if (!is_string($website)) {
+    respond(400, false, $expectsHtml, 'Please enter a valid email address and try again.');
+}
+
+if (trim($website) !== '') {
+    respond(200, true, $expectsHtml, 'Thanks for joining the Ringside founding list. We’ll be in touch.');
+}
+
 $apiKey = getenv('RESEND_API_KEY') ?: ($_ENV['RESEND_API_KEY'] ?? '');
 $audienceId = getenv('RESEND_AUDIENCE_ID') ?: ($_ENV['RESEND_AUDIENCE_ID'] ?? '');
 
 if (!$apiKey || !$audienceId) {
     respond(500, false, $expectsHtml, 'The signup service is temporarily unavailable. Please try again later.');
+}
+
+$clientAddress = filter_var($_SERVER['HTTP_CF_CONNECTING_IP'] ?? '', FILTER_VALIDATE_IP)
+    ?: (filter_var($_SERVER['REMOTE_ADDR'] ?? '', FILTER_VALIDATE_IP) ?: 'unknown');
+$siteName = $_SERVER['SERVER_NAME'] ?? 'ringside';
+$rateLimitDirectory = sys_get_temp_dir() . '/ringside-waitlist-' . substr(hash('sha256', $siteName), 0, 16);
+$retryAfter = consumeWaitlistRateLimit($clientAddress, $apiKey, $rateLimitDirectory, time());
+
+if ($retryAfter === null) {
+    respond(503, false, $expectsHtml, 'The signup service is temporarily unavailable. Please try again later.');
+}
+
+if ($retryAfter > 0) {
+    header('Retry-After: ' . $retryAfter);
+    respond(429, false, $expectsHtml, 'Too many signup attempts. Please wait before trying again.');
 }
 
 // Add contact to audience

@@ -23,8 +23,7 @@
     <link rel="canonical" href="https://theringside.app/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>{{ $page->title }}</title>
-    <link rel="stylesheet" href="css/tailwind.css">
-    <script src="https://cdn.usefathom.com/script.js" data-site="QZDCFJBS" defer></script>
+    <link rel="stylesheet" href="css/tailwind-{{ $page->cssVersion }}.css">
     <script type="application/ld+json">
         {
             "@@context": "https://schema.org",
@@ -87,17 +86,19 @@
             status.textContent = 'Saving your email…';
             status.classList.remove('text-ringside-signal');
             try {
-                const response = await fetch('/api/waitlist.php', { method: 'POST', headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}, body: JSON.stringify({ email, product: 'ringside' }) });
+                const response = await fetch('/api/waitlist.php', { method: 'POST', headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}, body: JSON.stringify({ email, product: 'ringside', website: form.elements.website.value }) });
                 const result = await response.json();
+                if (response.status === 429) throw new Error('rate-limited');
                 if (!response.ok || !result.success) throw new Error('Unable to join');
                 form.reset();
                 status.textContent = "You're on the list. We'll be in touch.";
                 status.classList.add('text-ringside-signal');
                 label.textContent = 'You’re in';
                 button.removeAttribute('aria-busy');
-                window.fathom?.trackEvent('waitlist_submitted');
-            } catch {
-                status.textContent = 'We could not save that email. Please try again.';
+            } catch (error) {
+                status.textContent = error.message === 'rate-limited'
+                    ? 'Too many attempts. Please wait before trying again.'
+                    : 'We could not save that email. Please try again.';
                 status.classList.add('text-ringside-signal');
                 label.textContent = 'Try again';
                 button.disabled = false;

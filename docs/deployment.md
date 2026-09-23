@@ -17,12 +17,14 @@ $CREATE_RELEASE()
 cd $FORGE_RELEASE_DIRECTORY
 
 composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+npm ci --no-audit --no-fund
+npm run build
 vendor/bin/jigsaw build production --quiet
 
 $ACTIVATE_RELEASE()
 ```
 
-The release helper creates the new zero-downtime release, Composer installs the locked production dependencies, Jigsaw generates the site into `public`, and the activation helper switches traffic to the completed release.
+The release helper creates the new zero-downtime release, Composer and npm install the locked dependencies, the build generates Tailwind CSS and a content-hashed stylesheet, Jigsaw generates the site into `public`, and the activation helper switches traffic to the completed release. The hashed stylesheet URL changes with its contents so Cloudflare can cache it without serving an older build.
 
 After changing the deployment script, deploy staging first and verify the generated site before deploying production.
 
@@ -32,6 +34,20 @@ The waitlist endpoint requires both `RESEND_API_KEY` and an explicit
 `RESEND_AUDIENCE_ID`. Production and staging must use different Resend
 audiences so test signups cannot enter the production list. Keep both values in
 the Forge environment only; never commit them to the repository.
+
+The endpoint ignores submissions that fill its hidden honeypot and limits a
+visitor address to 20 valid submissions per hour. Rate-limit state is stored
+as HMAC fingerprints in a private, site-specific directory under PHP's system
+temporary directory; the raw visitor address is not persisted. When traffic is
+proxied through Cloudflare, the endpoint uses `CF-Connecting-IP`; keep the
+origin restricted to trusted Cloudflare ingress so that header cannot be
+spoofed by direct requests. If rate-limit storage is unavailable, the endpoint
+fails closed with a temporary-service response.
+
+Pull requests to `main` run the production asset/site build, PHP syntax checks,
+rate-limiter tests, and safe endpoint-response checks through
+[`ci.yml`](../.github/workflows/ci.yml). These checks never submit a real email
+to Resend.
 
 ## Launch-readiness checks
 
