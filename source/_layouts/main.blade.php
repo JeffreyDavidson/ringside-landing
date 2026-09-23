@@ -63,7 +63,7 @@
 
     <footer class="border-t border-ringside-line py-8">
         <x-page-width class="flex flex-wrap items-center justify-between gap-6">
-            <div class="flex flex-wrap items-center gap-5"><x-wordmark /><p>© 2026 Ringside. Wrestling promotion management.</p><a class="text-sm text-ringside-muted transition-colors hover:text-ringside-signal" href="https://infinitydigital.dev">Built by Infinity Digital</a></div>
+            <div class="flex flex-wrap items-center gap-5"><x-wordmark /><p>© 2026 Ringside. Wrestling promotion management.</p><a class="text-sm text-ringside-muted transition-colors hover:underline hover:underline-offset-4" href="https://infinitydigital.dev"><span>Built by</span> <span class="text-ringside-signal">Infinity Digital LLC</span></a></div>
             <a class="inline-flex min-h-11 items-center gap-4 text-sm text-ringside-muted transition-colors hover:text-ringside-signal" href="#top">Back to top <svg class="h-5 w-5 flex-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14"/></svg></a>
         </x-page-width>
     </footer>
