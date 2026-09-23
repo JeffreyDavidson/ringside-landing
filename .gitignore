@@ -7,6 +7,7 @@ public/assets/
 /vendor/
 /.idea/
 /.vscode/
+/.impeccable/
 npm-debug.log
 hot
 

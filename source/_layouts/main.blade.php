@@ -22,6 +22,7 @@
     <meta name="theme-color" content="#101112">
     <link rel="canonical" href="https://theringside.app/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preload" href="fonts/anton/anton-regular.ttf" as="font" type="font/ttf" crossorigin>
     <title>{{ $page->title }}</title>
     <link rel="stylesheet" href="css/tailwind-{{ $page->cssVersion }}.css">
     <script type="application/ld+json">
