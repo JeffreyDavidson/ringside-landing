@@ -22,8 +22,9 @@
     <meta name="theme-color" content="#101112">
     <link rel="canonical" href="https://theringside.app/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preload" href="fonts/anton/anton-regular.ttf" as="font" type="font/ttf" crossorigin>
     <title>Ringside — Wrestling promotion management</title>
-    <link rel="stylesheet" href="css/tailwind-8257fd7253be9449.css">
+    <link rel="stylesheet" href="css/tailwind-d482919b9299c074.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -97,7 +98,7 @@
 </div>
         <div class="mt-10 overflow-hidden border border-ringside-line-card border-t-[3px] border-t-ringside-signal bg-ringside-surface-card" aria-label="Illustrative Ringside event card">
             <div class="flex justify-between gap-4 border-b border-ringside-line px-5 py-4 text-xs font-bold tracking-[0.1em] text-ringside-muted-subtle"><span>RINGSIDE / EVENT CARD</span><span class="text-ringside-signal-soft">BUILDING</span></div>
-            <div class="flex items-end justify-between gap-8 bg-gradient-to-br from-ringside-surface-panel to-ringside-surface-card px-5 py-8"><div><p class="mb-2 text-xs font-bold uppercase tracking-[0.08em] text-ringside-muted">Saturday · October 18</p><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance text-3xl sm:text-4xl">
+            <div class="flex items-end justify-between gap-8 bg-gradient-to-br from-ringside-surface-panel to-ringside-surface-card px-5 py-8"><div><p class="mb-2 text-xs font-bold uppercase tracking-[0.08em] text-ringside-muted">Sample show · Date TBD</p><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance text-3xl sm:text-4xl">
     Autumn Collision
 </h3>
 </div><span class="text-right font-display text-[3.5rem] leading-[0.8] text-ringside-signal">04<br><small class="font-body text-xs font-bold tracking-[0.1em] text-ringside-muted">MATCHES</small></span></div>
@@ -202,11 +203,11 @@
     <p class="mt-5 max-w-2xl text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Set the venue and date, then bring the right people, officials and title into one match card.</p>
 </div>
         <div class="mt-14 grid grid-cols-2 gap-12 max-[767px]:mt-10 max-[767px]:grid-cols-1 max-[767px]:gap-8">
-            <div id="events" class="border-t border-ringside-white-half pt-8 max-[767px]:pt-5"><span class="mb-8 block text-xs font-bold uppercase tracking-[0.1em] text-ringside-white max-[767px]:mb-5">Set the stage</span><svg class="mb-8 h-10 w-10 stroke-current stroke-[1.5] max-[767px]:mb-5 max-[767px]:h-8 max-[767px]:w-8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance mb-4 text-[clamp(2rem,3.5vw,3rem)] max-[767px]:mb-3">
+            <div id="events" class="scroll-mt-20 border-t border-ringside-white-half pt-8 max-[767px]:pt-5"><span class="mb-8 block text-xs font-bold uppercase tracking-[0.1em] text-ringside-white max-[767px]:mb-5">Set the stage</span><svg class="mb-8 h-10 w-10 stroke-current stroke-[1.5] max-[767px]:mb-5 max-[767px]:h-8 max-[767px]:w-8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance mb-4 text-[clamp(2rem,3.5vw,3rem)] max-[767px]:mb-3">
     Start with the event.
 </h3>
 <p class="text-[1.125rem] leading-[1.75] max-[767px]:text-base max-[767px]:leading-[1.6]">Keep the venue, date and show details together as the night takes shape.</p><p class="mt-6 text-sm font-bold max-[767px]:mt-4">Events / Venues / Scheduling</p></div>
-            <div id="matches" class="border-t border-ringside-white-half pt-8 max-[767px]:pt-5"><span class="mb-8 block text-xs font-bold uppercase tracking-[0.1em] text-ringside-white max-[767px]:mb-5">Before the bell</span><svg class="mb-8 h-10 w-10 stroke-current stroke-[1.5] max-[767px]:mb-5 max-[767px]:h-8 max-[767px]:w-8" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5"/></svg><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance mb-4 text-[clamp(2rem,3.5vw,3rem)] max-[767px]:mb-3">
+            <div id="matches" class="scroll-mt-20 border-t border-ringside-white-half pt-8 max-[767px]:pt-5"><span class="mb-8 block text-xs font-bold uppercase tracking-[0.1em] text-ringside-white max-[767px]:mb-5">Before the bell</span><svg class="mb-8 h-10 w-10 stroke-current stroke-[1.5] max-[767px]:mb-5 max-[767px]:h-8 max-[767px]:w-8" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h8M8 15h5"/></svg><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance mb-4 text-[clamp(2rem,3.5vw,3rem)] max-[767px]:mb-3">
     Then build the card.
 </h3>
 <p class="text-[1.125rem] leading-[1.75] max-[767px]:text-base max-[767px]:leading-[1.6]">Book competitors, choose match types and assign officials before the show begins.</p><p class="mt-6 text-sm font-bold max-[767px]:mt-4">Competitors / Match types / Officials</p></div>
@@ -333,7 +334,7 @@
             <p class="text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Join the founding class and help shape the way independent wrestling promotions organize their next show.</p>
             <form class="mt-6 flex flex-wrap gap-3" action="/api/waitlist.php" method="post" onsubmit="handleWaitlist(event)">
                 <label class="sr-only" for="waitlist-email">Email address</label>
-                <input class="min-h-14 min-w-0 flex-1 border border-ringside-line-bright bg-ringside-surface-card px-4 text-ringside-ink placeholder:text-ringside-muted-subtle focus:border-ringside-white focus:outline-3 focus:outline-ringside-white focus:outline-offset-2 max-[520px]:basis-full" id="waitlist-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="waitlist-status" required>
+                <input class="min-h-14 min-w-0 flex-1 border border-ringside-line-bright bg-ringside-surface-card px-4 text-ringside-ink placeholder:text-ringside-muted-subtle focus:border-ringside-white focus:outline-3 focus:outline-ringside-white focus:outline-offset-2 max-[520px]:basis-full" id="waitlist-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" spellcheck="false" aria-describedby="waitlist-status" required>
                 <input type="hidden" name="product" value="ringside">
                 <div class="absolute left-[-10000px] h-px w-px overflow-hidden" aria-hidden="true">
                     <label for="waitlist-website">Leave this field empty</label>
@@ -342,7 +343,7 @@
                 <button class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-red bg-ringside-red px-7 py-3.5 text-base font-bold leading-[1.4] text-ringside-white transition-colors hover:border-ringside-red-dark hover:bg-ringside-red-dark max-[520px]:w-full" type="submit"><span data-waitlist-label>Join the founding class</span> <svg class="h-5 w-5 flex-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </button>
             </form>
-            <p class="mt-3 text-sm text-ringside-muted-subtle" id="waitlist-status" role="status" aria-live="polite">No spam. Just launch updates.</p>
+            <p class="mt-3 text-sm text-ringside-muted-subtle" id="waitlist-status" role="status" aria-live="polite">No spam. We’ll only contact you about early access, product feedback, and Ringside launch updates.</p>
             <p class="mt-2 text-sm leading-relaxed text-ringside-muted-subtle">Your email is sent to Resend to manage the founding list and is used for early access, product feedback, and Ringside launch updates.</p>
             <div class="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-xs font-bold uppercase tracking-[0.08em] text-ringside-muted-subtle" aria-label="Founding class details">
                 <span class="inline-flex items-center gap-3 before:h-1.5 before:w-1.5 before:bg-ringside-signal before:content-['']">Early access</span>
