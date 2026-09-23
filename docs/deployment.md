@@ -17,12 +17,14 @@ $CREATE_RELEASE()
 cd $FORGE_RELEASE_DIRECTORY
 
 composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+npm ci --no-audit --no-fund
+npm run build
 vendor/bin/jigsaw build production --quiet
 
 $ACTIVATE_RELEASE()
 ```
 
-The release helper creates the new zero-downtime release, Composer installs the locked production dependencies, Jigsaw generates the site into `public`, and the activation helper switches traffic to the completed release.
+The release helper creates the new zero-downtime release, Composer and npm install the locked dependencies, the build generates Tailwind CSS and a content-hashed stylesheet, Jigsaw generates the site into `public`, and the activation helper switches traffic to the completed release. The hashed stylesheet URL changes with its contents so Cloudflare can cache it without serving an older build.
 
 After changing the deployment script, deploy staging first and verify the generated site before deploying production.
 

@@ -34,6 +34,7 @@ function respond(int $status, bool $success, bool $expectsHtml, string $message)
     $escapedMessage = htmlspecialchars($message, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
     $destination = $success ? '/#top' : '/#waitlist';
     $linkLabel = $success ? 'Back to Ringside' : 'Return to signup';
+    $cssVersion = substr(hash_file('sha256', __DIR__ . '/../css/tailwind.css'), 0, 16);
 
     echo <<<HTML
         <!doctype html>
@@ -43,7 +44,7 @@ function respond(int $status, bool $success, bool $expectsHtml, string $message)
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="theme-color" content="#101112">
             <title>{$escapedTitle} | Ringside</title>
-            <link rel="stylesheet" href="/css/tailwind.css">
+            <link rel="stylesheet" href="/css/tailwind-{$cssVersion}.css">
         </head>
         <body>
             <main class="mx-auto grid min-h-screen w-[calc(100%-2.5rem)] max-w-[80rem] content-center gap-6 py-12 sm:w-[calc(100%-6rem)]">
