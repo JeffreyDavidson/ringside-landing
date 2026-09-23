@@ -12,11 +12,11 @@
     </x-page-width>
 </section>
 
-<nav class="relative border-y border-ringside-line bg-ringside-surface-index before:absolute before:inset-y-0 before:left-0 before:w-1/4 before:bg-ringside-red before:opacity-85 before:content-[''] max-[767px]:before:hidden" aria-label="Explore the features">
+<nav class="border-y border-ringside-line bg-ringside-surface-index" aria-label="Explore the features">
     <x-page-width class="grid grid-cols-4 max-[767px]:grid-cols-2">
-        <a class="relative flex items-center gap-4 px-6 py-6 text-base font-bold transition-colors first:pl-0 hover:bg-ringside-surface-faq max-[767px]:border-b max-[767px]:border-ringside-line max-[767px]:px-0" href="#roster"><span>Know your people</span><x-icon.arrow-up-right class="ml-auto" /></a>
-        <a class="relative flex items-center gap-4 border-l border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-faq max-[767px]:border-b max-[767px]:px-0" href="#events"><span>Set the stage</span><x-icon.arrow-up-right class="ml-auto" /></a>
-        <a class="relative flex items-center gap-4 border-l border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-faq max-[767px]:border-l-0 max-[767px]:px-0" href="#matches"><span>Build the card</span><x-icon.arrow-up-right class="ml-auto" /></a>
-        <a class="relative flex items-center gap-4 border-l border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-faq max-[767px]:px-0" href="#championships"><span>Keep the history</span><x-icon.arrow-up-right class="ml-auto" /></a>
+        <a class="relative flex items-center gap-4 border-l border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-faq max-[767px]:border-b max-[767px]:border-ringside-line max-[767px]:px-0" href="#roster"><span>Know your people</span><x-icon.arrow-up-right class="ml-auto" /></a>
+        <a class="relative flex items-center gap-4 border-l border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-faq max-[767px]:border-r max-[767px]:border-ringside-line max-[767px]:border-b max-[767px]:px-0" href="#events"><span>Set the stage</span><x-icon.arrow-up-right class="ml-auto" /></a>
+        <a class="relative flex items-center gap-4 border-l border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-faq max-[767px]:px-0" href="#matches"><span>Build the card</span><x-icon.arrow-up-right class="ml-auto" /></a>
+        <a class="relative flex items-center gap-4 border-l border-r border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-faq max-[767px]:px-0" href="#championships"><span>Keep the history</span><x-icon.arrow-up-right class="ml-auto" /></a>
     </x-page-width>
 </nav>
