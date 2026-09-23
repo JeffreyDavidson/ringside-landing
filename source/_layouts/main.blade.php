@@ -23,7 +23,7 @@
     <link rel="canonical" href="https://theringside.app/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>{{ $page->title }}</title>
-    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/tailwind-{{ $page->cssVersion }}.css">
     <script src="https://cdn.usefathom.com/script.js" data-site="QZDCFJBS" defer></script>
     <script type="application/ld+json">
         {
