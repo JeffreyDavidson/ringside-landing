@@ -24,7 +24,6 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>{{ $page->title }}</title>
     <link rel="stylesheet" href="css/tailwind-{{ $page->cssVersion }}.css">
-    <script src="https://cdn.usefathom.com/script.js" data-site="QZDCFJBS" defer></script>
     <script type="application/ld+json">
         {
             "@@context": "https://schema.org",
@@ -95,7 +94,6 @@
                 status.classList.add('text-ringside-signal');
                 label.textContent = 'You’re in';
                 button.removeAttribute('aria-busy');
-                window.fathom?.trackEvent('waitlist_submitted');
             } catch {
                 status.textContent = 'We could not save that email. Please try again.';
                 status.classList.add('text-ringside-signal');
