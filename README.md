@@ -25,6 +25,12 @@ in `source/_sections/`, and small anonymous components in `source/_components/`.
 The generated `public/` output remains checked in and should be rebuilt after
 source changes.
 
+The public signup endpoint validates founding-list requests in
+`source/api/waitlist.php`, sends accepted contacts to Resend, and uses the shared
+rate limiter in `app/waitlist-rate-limiter.php`. Automated checks build the
+site and exercise only safe or synthetic signup cases; they never add a real
+contact.
+
 ## Deployment
 
 The repository uses a simplified Gitflow strategy with `main` as the only deployment branch. Work should be completed on a focused branch and merged into `main` through a squash-merged pull request.

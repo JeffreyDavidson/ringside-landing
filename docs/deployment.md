@@ -35,6 +35,20 @@ The waitlist endpoint requires both `RESEND_API_KEY` and an explicit
 audiences so test signups cannot enter the production list. Keep both values in
 the Forge environment only; never commit them to the repository.
 
+The endpoint ignores submissions that fill its hidden honeypot and limits a
+visitor address to 20 valid submissions per hour. Rate-limit state is stored
+as HMAC fingerprints in a private, site-specific directory under PHP's system
+temporary directory; the raw visitor address is not persisted. When traffic is
+proxied through Cloudflare, the endpoint uses `CF-Connecting-IP`; keep the
+origin restricted to trusted Cloudflare ingress so that header cannot be
+spoofed by direct requests. If rate-limit storage is unavailable, the endpoint
+fails closed with a temporary-service response.
+
+Pull requests to `main` run the production asset/site build, PHP syntax checks,
+rate-limiter tests, and safe endpoint-response checks through
+[`ci.yml`](../.github/workflows/ci.yml). These checks never submit a real email
+to Resend.
+
 ## Launch-readiness checks
 
 Run these checks after a production deployment:

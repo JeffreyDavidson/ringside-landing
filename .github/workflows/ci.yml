@@ -1,0 +1,63 @@
+name: Verify marketing site
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: curl
+          tools: composer:v2
+          coverage: none
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Validate Composer metadata
+        run: composer validate --no-check-publish
+
+      - name: Install JavaScript dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build Tailwind assets
+        run: npm run build
+
+      - name: Build Jigsaw site
+        run: vendor/bin/jigsaw build production --quiet
+
+      - name: Verify generated assets are committed
+        run: git diff --exit-code -- public/ source/css/tailwind.css
+
+      - name: Check PHP syntax
+        run: |
+          php -l source/api/waitlist.php
+          php -l public/api/waitlist.php
+          php -l app/waitlist-rate-limiter.php
+          php -l tests/waitlist-rate-limiter.php
+
+      - name: Test waitlist rate limiter
+        run: php tests/waitlist-rate-limiter.php
+
+      - name: Test safe waitlist endpoint responses
+        run: bash scripts/check-waitlist-endpoint.sh
