@@ -54,6 +54,16 @@ html {
     scroll-padding-top: 2rem;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    details[open] summary span {
+        transition-duration: 0ms;
+    }
+}
+
 section[id] {
     scroll-margin-top: 5rem;
 }
