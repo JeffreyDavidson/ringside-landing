@@ -8,7 +8,7 @@ colors:
   surface: "#101112"
   surface-header: "#09090a"
   surface-hero: "#060607"
-  surface-hover: "#272729"
+  surface-hover: "#161719"
   text: "#f7f7f5"
   muted: "#bfc0c3"
   line: "#363638"
@@ -103,7 +103,7 @@ The palette is deliberately narrow. Red carries action and emphasis; neutral gra
 - **Text white** (#f7f7f5): Primary text and button labels.
 - **Muted gray** (#bfc0c3): Supporting copy and secondary metadata.
 - **Rule gray** (#363638): Dividers, borders, and structural lines.
-- **Hover charcoal** (#272729): Outline-button and feature-row hover surface.
+- **Hover charcoal** (#161719): Outline-button and feature-row hover surface (`surface-hover`).
 
 ### Named Rules
 
@@ -111,7 +111,7 @@ The palette is deliberately narrow. Red carries action and emphasis; neutral gra
 
 ## Typography
 
-**Display Font:** Anton (with Arial Narrow and Arial fallbacks)
+**Display Font:** Anton (with Arial Narrow and Arial fallbacks), served as a Latin-subset WOFF2 with the original TTF as a fallback source.
 
 **Body Font:** Arial (with Helvetica fallback)
 
@@ -131,13 +131,15 @@ The palette is deliberately narrow. Red carries action and emphasis; neutral gra
 
 Use a centered content rail: `width: min(100% - 6rem, 1280px)`. Full-bleed hero imagery and section backgrounds may extend beyond the rail, while text and controls stay aligned to it.
 
-Sections use generous vertical padding, normally `clamp(4rem, 7vw, 7rem)`. Desktop layouts favor two-column editorial compositions such as `1.25fr 1fr`, with a `6rem` gap when space allows. Section headings use a stacked reading path rather than a split heading/explainer header. The page narrative moves from promoter outcomes into immediate event-card proof, then roster operations, show workflow, championship history, and founding access. The product proof should arrive directly after the hero: use open operational panels and compact lifecycle metadata to make the system tangible before explaining it. The roster section may pair editorial outcome rows with one restrained, illustrative roster board so the page feels like a product for promoters rather than a generic feature list. The hero is sized against the viewport so its action row remains visible on desktop. Feature indexes and metadata rows use thin vertical rules, with a signal-red leading cell as a navigation cue. At the mobile breakpoint around `760px`, collapse columns, reduce the page gutter to about `1rem`, preserve the display hierarchy rather than shrinking every element proportionally, and switch the feature index to two columns.
+Sections use generous vertical padding, normally `clamp(4rem, 7vw, 7rem)`. Desktop layouts favor two-column editorial compositions such as `1.25fr 1fr`, with a `6rem` gap when space allows. Section headings use a stacked reading path rather than a split heading/explainer header. The current page narrative is: hero and feature index, roster operations, the show-night workflow, championship history, FAQ, and founding access. Additional section partials in `source/_sections/` (event-card capabilities, how-it-works, proof, after-the-bell, bridge CTA) are not on the page; they are kept deliberately as design alternatives while the direction is being decided. The roster section may pair editorial outcome rows with one restrained, illustrative roster board so the page feels like a product for promoters rather than a generic feature list. The hero is sized against the viewport so its action row remains visible on desktop. Feature indexes and metadata rows use thin vertical rules, with a signal-red leading cell as a navigation cue. At the mobile breakpoint around `760px`, collapse columns, reduce the page gutter to about `1rem`, preserve the display hierarchy rather than shrinking every element proportionally, and switch the feature index to two columns.
 
 Keep a clear reading path: one dominant statement, one supporting paragraph, and one obvious action per decision area. Use `text-wrap: balance` for display headings and `text-wrap: pretty` for supporting copy.
 
 ## Elevation & Depth
 
-The system is flat by default. Depth comes from tonal layering, photography, scrims, rules, and spacing rather than floating cards. The only routine shadow is a restrained red glow under the primary hero action (`0 12px 30px rgb(203 32 40 / 24%)`). The event-card preview uses a signal-red top rule and internal dividers instead of a drop shadow. Avoid generic gray drop shadows and glass effects.
+The system is flat by default. Depth comes from tonal layering, photography, scrims, rules, and spacing rather than floating cards. The only routine shadow is a restrained red glow under the primary hero action (`shadow-ringside-glow`).
+
+Photo-backed sections use the shared scrim utilities in `source/css/marketing.css`, all built from `surface-deep`: `bg-scrim-right` (desktop, left-to-right), `bg-scrim-down` (mobile, full-height photo) and `bg-scrim-fade` (mobile, photo cropped to the top that fades to a solid surface). Keep text over photography at 4.5:1 or better against the brightest pixel behind it; don't add one-off `rgb()` gradients. The event-card preview uses a signal-red top rule and internal dividers instead of a drop shadow. Avoid generic gray drop shadows and glass effects.
 
 ## Shapes
 
@@ -148,6 +150,7 @@ Controls are square and decisive: buttons, rows, and panels use no radius. The f
 ### Wordmark
 
 - Anton, uppercase, tight tracking (`-0.035em`), approximately `2.75rem`.
+- The header wordmark links to the top of the page; the footer wordmark is plain text (`<x-wordmark :link="false" />`).
 - “RING” uses the primary text color; “SIDE” uses Signal red.
 - Keep the wordmark compact and avoid adding an icon beside it.
 

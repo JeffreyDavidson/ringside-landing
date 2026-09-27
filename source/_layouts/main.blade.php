@@ -22,7 +22,7 @@
     <meta name="theme-color" content="#101112">
     <link rel="canonical" href="https://theringside.app/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="preload" href="fonts/anton/anton-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/anton/anton-regular-latin.woff2" as="font" type="font/woff2" crossorigin>
     <title>{{ $page->title }}</title>
     <link rel="stylesheet" href="css/tailwind-{{ $page->cssVersion }}.css">
     <script type="application/ld+json">
@@ -45,13 +45,13 @@
 </head>
 <body>
     <div id="top" aria-hidden="true"></div>
-    <a class="fixed left-4 top-4 z-10 -translate-y-[200%] bg-ringside-white p-4 text-ringside-black focus:translate-y-0" href="#main">Skip to content</a>
+    <a class="fixed left-4 top-4 z-30 -translate-y-[200%] bg-ringside-white p-4 text-ringside-black focus:translate-y-0" href="#main">Skip to content</a>
     <header class="sticky top-0 z-20 border-b border-ringside-white-subtle bg-ringside-surface-header py-5">
         <x-page-width class="flex items-center justify-between gap-6 max-[767px]:gap-3.5">
             <x-wordmark />
             <nav class="flex items-center gap-5" aria-label="Main navigation">
                 <a class="inline-flex min-h-11 items-center font-semibold transition-colors hover:text-ringside-signal max-[430px]:!hidden" href="#features">Features</a>
-                <a class="inline-flex min-h-11 items-center justify-center gap-4 border border-ringside-outline px-5 py-2.5 font-bold transition-colors hover:border-ringside-white hover:bg-ringside-surface-faq max-[520px]:px-3 max-[520px]:text-sm max-[430px]:gap-2 max-[430px]:px-2.5 max-[430px]:text-xs" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
+                <a class="inline-flex min-h-11 items-center justify-center gap-4 border border-ringside-outline px-5 py-2.5 font-bold transition-colors hover:border-ringside-white hover:bg-ringside-surface-hover max-[520px]:px-3 max-[520px]:text-sm max-[430px]:gap-2 max-[430px]:px-2.5 max-[430px]:text-xs" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
             </nav>
         </x-page-width>
     </header>
@@ -62,8 +62,8 @@
 
     <footer class="border-t border-ringside-line py-8">
         <x-page-width class="flex flex-wrap items-center justify-between gap-6">
-            <div class="flex flex-wrap items-center gap-5"><x-wordmark /><p>© 2026 Ringside. Wrestling promotion management.</p><a class="text-sm text-ringside-muted transition-colors hover:underline hover:underline-offset-4" href="https://infinitydigital.dev"><span>Built by</span> <span class="text-ringside-signal">Infinity Digital LLC</span></a></div>
-            <a class="inline-flex min-h-11 items-center gap-4 text-sm text-ringside-muted transition-colors hover:text-ringside-signal" href="#top">Back to top <svg class="h-5 w-5 flex-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14"/></svg></a>
+            <div class="flex flex-wrap items-center gap-5"><x-wordmark :link="false" /><p>© 2026 Ringside. Wrestling promotion management.</p><a class="text-sm text-ringside-muted transition-colors hover:underline hover:underline-offset-4" href="https://infinitydigital.dev"><span>Built by</span> <span class="text-ringside-signal">Infinity Digital LLC</span></a></div>
+            <a class="inline-flex min-h-11 items-center gap-4 text-sm text-ringside-muted transition-colors hover:text-ringside-signal" href="#top">Back to top <svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14"/></svg></a>
         </x-page-width>
     </footer>
 
@@ -97,8 +97,8 @@
                 button.removeAttribute('aria-busy');
             } catch (error) {
                 status.textContent = error.message === 'rate-limited'
-                    ? 'Too many attempts. Please wait before trying again.'
-                    : 'We could not save that email. Please try again.';
+                    ? 'Error: Too many attempts. Please wait before trying again.'
+                    : 'Error: We could not save that email. Please try again.';
                 status.classList.add('text-ringside-signal');
                 label.textContent = 'Try again';
                 button.disabled = false;

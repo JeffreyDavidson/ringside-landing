@@ -12,11 +12,11 @@
     --color-ringside-surface-index: #0b0c0d;
     --color-ringside-surface-panel: #171819;
     --color-ringside-surface-faq: #161719;
+    --color-ringside-surface-hover: #161719;
     --color-ringside-surface-card: #0d0e0f;
     --color-ringside-ink: #f7f7f5;
     --color-ringside-muted: #bfc0c3;
     --color-ringside-muted-bright: #d5d5d7;
-    --color-ringside-muted-soft: #c6c6c8;
     --color-ringside-muted-subtle: #8f9094;
     --color-ringside-line: #363638;
     --color-ringside-line-bright: #49494c;
@@ -33,8 +33,33 @@
     --color-ringside-white-subtle: rgb(255 255 255 / 8%);
     --color-ringside-black: #111111;
     --color-ringside-black-overlay: rgb(0 0 0 / 36%);
+    --shadow-ringside-glow: 0 12px 30px rgb(203 32 40 / 24%);
     --radius-ringside-pill: 999px;
     --color-signal: var(--color-ringside-signal);
+}
+
+/* Photo scrims: fade the deep surface over background photography so copy stays readable. */
+@utility bg-scrim-right {
+    background: linear-gradient(90deg,
+        color-mix(in srgb, var(--color-ringside-surface-deep) 96%, transparent) 0%,
+        color-mix(in srgb, var(--color-ringside-surface-deep) 90%, transparent) 42%,
+        color-mix(in srgb, var(--color-ringside-surface-deep) 68%, transparent) 100%);
+}
+
+@utility bg-scrim-down {
+    background: linear-gradient(180deg,
+        color-mix(in srgb, var(--color-ringside-surface-deep) 94%, transparent) 0%,
+        color-mix(in srgb, var(--color-ringside-surface-deep) 88%, transparent) 58%,
+        color-mix(in srgb, var(--color-ringside-surface-deep) 66%, transparent) 100%);
+}
+
+/* Mobile scrim for photos cropped to the top of a section: fades to a solid surface. */
+@utility bg-scrim-fade {
+    background: linear-gradient(180deg,
+        color-mix(in srgb, var(--color-ringside-surface-deep) 82%, transparent) 0%,
+        color-mix(in srgb, var(--color-ringside-surface-deep) 92%, transparent) 34%,
+        color-mix(in srgb, var(--color-ringside-surface-deep) 98%, transparent) 62%,
+        var(--color-ringside-surface-deep) 100%);
 }
 
 @font-face {
@@ -42,7 +67,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('../fonts/anton/anton-regular.ttf') format('truetype');
+    src: url('../fonts/anton/anton-regular-latin.woff2') format('woff2'),
+        url('../fonts/anton/anton-regular.ttf') format('truetype');
 }
 
 :root {
@@ -59,7 +85,7 @@ html {
         scroll-behavior: auto;
     }
 
-    details[open] summary span {
+    details summary span {
         transition-duration: 0ms;
     }
 }
@@ -107,6 +133,5 @@ summary::-webkit-details-marker {
 }
 
 details[open] summary span {
-    display: inline-block;
     transform: rotate(45deg);
 }

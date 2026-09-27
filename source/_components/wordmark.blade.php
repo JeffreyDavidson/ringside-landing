@@ -1,1 +1,7 @@
-<a class="inline-block font-display text-[2.75rem] font-normal uppercase leading-none tracking-[-0.035em]" href="#top" aria-label="Ringside home">RING<span class="text-ringside-signal">SIDE</span></a>
+@props(['link' => true])
+
+@if ($link)
+    <a class="inline-block font-display text-[2.75rem] font-normal uppercase leading-none tracking-[-0.035em]" href="#top" aria-label="Ringside home">RING<span class="text-ringside-signal">SIDE</span></a>
+@else
+    <span class="inline-block font-display text-[2.75rem] font-normal uppercase leading-none tracking-[-0.035em]">RING<span class="text-ringside-signal">SIDE</span></span>
+@endif

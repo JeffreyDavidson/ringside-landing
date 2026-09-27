@@ -1,6 +1,6 @@
 <section id="features" class="relative isolate overflow-hidden border-y border-ringside-line bg-ringside-surface-deep py-[clamp(4rem,7vw,7rem)]" aria-labelledby="features-title">
-    <img class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_52%] max-[767px]:h-[62%] max-[767px]:object-[72%_44%]" src="images/marketing/match-result.webp" width="1672" height="941" alt="" aria-hidden="true" loading="lazy">
-    <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgb(6_6_7_/_96%)_0%,rgb(6_6_7_/_91%)_42%,rgb(6_6_7_/_45%)_100%)] max-[767px]:bg-[linear-gradient(180deg,rgb(6_6_7_/_82%)_0%,rgb(6_6_7_/_92%)_34%,rgb(6_6_7_/_98%)_62%,rgb(6_6_7_/_100%)_100%)]" aria-hidden="true"></div>
+    <img class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_52%] max-[767px]:h-[62%] max-[767px]:object-[72%_44%]" src="images/marketing/match-result.webp" srcset="images/marketing/match-result-960.webp 960w, images/marketing/match-result.webp 1672w" sizes="100vw" width="1672" height="941" alt="" aria-hidden="true" loading="lazy">
+    <div class="absolute inset-0 -z-10 bg-scrim-right max-[767px]:bg-scrim-fade" aria-hidden="true"></div>
     <x-page-width class="relative">
         <div class="grid grid-cols-[0.8fr_1.2fr] gap-16 max-[900px]:grid-cols-1 max-[900px]:gap-10">
             <div class="max-w-xl">
