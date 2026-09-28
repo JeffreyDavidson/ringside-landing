@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Organize your wrestling promotion’s roster, events, matches, results and championship history with Ringside.">
+    <meta name="description" content="Book cards with wrestlers who are actually cleared to work, record every result, and keep your promotion’s title history with Ringside.">
     <meta property="og:title" content="Ringside — Wrestling promotion management">
-    <meta property="og:description" content="Organize your wrestling promotion’s roster, events, matches, results and championship history with Ringside.">
+    <meta property="og:description" content="Book cards with wrestlers who are actually cleared to work, record every result, and keep your promotion’s title history with Ringside.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://theringside.app/">
     <meta property="og:site_name" content="Ringside">
@@ -16,7 +16,7 @@
     <meta property="og:image:alt" content="Ringside — Run the show. Own the story. Wrestling promotion management, with a red-roped wrestling ring in a dark arena.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ringside — Wrestling promotion management">
-    <meta name="twitter:description" content="Organize your wrestling promotion’s roster, events, matches, results and championship history with Ringside.">
+    <meta name="twitter:description" content="Book cards with wrestlers who are actually cleared to work, record every result, and keep your promotion’s title history with Ringside.">
     <meta name="twitter:image" content="https://theringside.app/images/marketing/ringside-social-v1.jpg">
     <meta name="twitter:image:alt" content="Ringside — Run the show. Own the story. Wrestling promotion management, with a red-roped wrestling ring in a dark arena.">
     <meta name="theme-color" content="#101112">
@@ -24,14 +24,14 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preload" href="fonts/anton/anton-regular-latin.woff2" as="font" type="font/woff2" crossorigin>
     <title>Ringside — Wrestling promotion management</title>
-    <link rel="stylesheet" href="css/tailwind-6a24e67bdfc206b6.css">
+    <link rel="stylesheet" href="css/tailwind-7bf55965765a8cba.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
             "name": "Ringside",
             "url": "https://theringside.app/",
-            "description": "Organize your wrestling promotion’s roster, events, matches, results and championship history with Ringside.",
+            "description": "Book cards with wrestlers who are actually cleared to work, record every result, and keep your promotion’s title history with Ringside.",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
             "image": "https://theringside.app/images/marketing/arena.webp",
@@ -50,7 +50,7 @@
         <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)] flex items-center justify-between gap-6 max-[767px]:gap-3.5">
     <a class="inline-block font-display text-[2.75rem] font-normal uppercase leading-none tracking-[-0.035em]" href="#top" aria-label="Ringside home">RING<span class="text-ringside-signal">SIDE</span></a>
             <nav class="flex items-center gap-5" aria-label="Main navigation">
-                <a class="inline-flex min-h-11 items-center font-semibold transition-colors hover:text-ringside-signal max-[430px]:!hidden" href="#features">Features</a>
+                <a class="inline-flex min-h-11 items-center font-semibold transition-colors hover:text-ringside-signal max-[430px]:!hidden" href="#event-card">Features</a>
                 <a class="inline-flex min-h-11 items-center justify-center gap-4 border border-ringside-outline px-5 py-2.5 font-bold transition-colors hover:border-ringside-white hover:bg-ringside-surface-hover max-[520px]:px-3 max-[520px]:text-sm max-[430px]:gap-2 max-[430px]:px-2.5 max-[430px]:text-xs" href="#waitlist">Join the founding class <svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
             </nav>
@@ -62,37 +62,77 @@
     <img class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_60%]" src="images/marketing/arena.webp" srcset="images/marketing/arena-960.webp 960w, images/marketing/arena.webp 1672w" sizes="100vw" width="1672" height="941" alt="" fetchpriority="high">
     <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,var(--color-ringside-black-overlay),transparent_75%)]" aria-hidden="true"></div>
     <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)] flex min-h-[clamp(32rem,calc(100svh-7rem),42rem)] flex-col justify-center py-[clamp(2rem,3vw,3rem)]">
-    <p class="mb-6 inline-flex self-start items-center rounded-ringside-pill border border-ringside-signal-border px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal-soft max-[430px]:px-3 max-[430px]:text-[0.6875rem] max-[430px]:tracking-[0.04em]">Built for independent wrestling promoters</p>
+    <p class="font-body text-[0.75rem] font-bold uppercase tracking-[0.1em] text-ringside-signal mb-6">
+    For independent wrestling promoters
+</p>
         <h1 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance text-[clamp(3.2rem,7.5vw,7rem)] leading-[1.13]" id="hero-title">
     <span class="block">Run the show.</span><span class="block text-signal">Own the story.</span>
 </h1>
-        <p class="my-6 max-w-[33rem] text-[clamp(1.1rem,1.6vw,1.35rem)] leading-[1.6] text-ringside-muted-bright text-pretty">Wrestling promotion management. Your roster, match cards and championship history, together.</p>
+        <p class="my-6 max-w-[33rem] text-[clamp(1.1rem,1.6vw,1.35rem)] leading-[1.6] text-ringside-muted-bright text-pretty">Ringside knows who’s under contract, hurt or suspended before you book them, and keeps every result and title reign on the record.</p>
         <div class="flex flex-wrap gap-3">
             <a class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-red bg-ringside-red px-7 py-3.5 text-base font-bold leading-[1.4] text-ringside-white shadow-ringside-glow transition-colors hover:border-ringside-red-dark hover:bg-ringside-red-dark" href="#waitlist">Join the founding class <svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
-            <a class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-outline px-7 py-3.5 text-base font-bold leading-[1.4] transition-colors hover:border-ringside-white hover:bg-ringside-surface-hover" href="#features">Explore Ringside <svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg></a>
+            <a class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-outline px-7 py-3.5 text-base font-bold leading-[1.4] transition-colors hover:border-ringside-white hover:bg-ringside-surface-hover" href="#event-card">Explore Ringside <svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg></a>
         </div>
 </div>
 </section>
 
 <nav class="border-y border-ringside-line bg-ringside-surface-index" aria-label="Explore the features">
-    <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)] grid grid-cols-4 max-[767px]:grid-cols-2">
-    <a class="relative flex items-center gap-4 border-l border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover max-[767px]:border-b max-[767px]:border-ringside-line max-[767px]:px-0" href="#roster"><span>Know your people</span><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] ml-auto" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+    <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)] grid grid-cols-3 max-[767px]:grid-cols-1">
+    <a class="flex items-center gap-4 border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover min-[768px]:border-l min-[768px]:last:border-r max-[767px]:border-b max-[767px]:px-0 max-[767px]:last:border-b-0" href="#event-card"><span>Build the card</span><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] ml-auto" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
-        <a class="relative flex items-center gap-4 border-l border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover max-[767px]:border-r max-[767px]:border-ringside-line max-[767px]:border-b max-[767px]:px-0" href="#events"><span>Set the stage</span><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] ml-auto" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        <a class="flex items-center gap-4 border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover min-[768px]:border-l min-[768px]:last:border-r max-[767px]:border-b max-[767px]:px-0 max-[767px]:last:border-b-0" href="#roster"><span>Know who can work</span><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] ml-auto" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
-        <a class="relative flex items-center gap-4 border-l border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover max-[767px]:px-0" href="#matches"><span>Build the card</span><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] ml-auto" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-</a>
-        <a class="relative flex items-center gap-4 border-l border-r border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover max-[767px]:px-0" href="#championships"><span>Keep the history</span><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] ml-auto" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        <a class="flex items-center gap-4 border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover min-[768px]:border-l min-[768px]:last:border-r max-[767px]:border-b max-[767px]:px-0 max-[767px]:last:border-b-0" href="#history"><span>Keep the history</span><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] ml-auto" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 </a>
 </div>
 </nav>
+    <section id="event-card" class="bg-ringside-surface-panel py-[clamp(4rem,5.5vw,5.5rem)]" aria-labelledby="event-card-title">
+    <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)]">
+    <div class="max-w-4xl">
+    <h2 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance max-w-[18ch] text-[clamp(2.6rem,4.5vw,4.5rem)]" id="event-card-title">
+    Build a card you can actually run.
+</h2>
+    <p class="mt-5 max-w-2xl text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Pick from 14 match types, then add competitors, referees and titles. Ringside only lets you book people who are under contract and cleared to work.</p>
+</div>
+        <div class="mt-10 overflow-hidden border border-ringside-line-card border-t-[3px] border-t-ringside-signal bg-ringside-surface-card" aria-label="Illustrative Ringside event card">
+            <div class="flex justify-between gap-4 border-b border-ringside-line px-5 py-4 text-xs font-bold tracking-[0.1em] text-ringside-muted-subtle"><span>RINGSIDE / EVENT CARD</span><span class="text-ringside-signal-soft">SCHEDULED</span></div>
+            <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-2 px-5 py-8"><div><p class="mb-2 text-xs font-bold uppercase tracking-[0.08em] text-ringside-muted">Sample show · Harbor Hall</p><h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance text-3xl sm:text-4xl">
+    Autumn Collision
+</h3>
+</div><p class="text-xs font-bold uppercase tracking-[0.1em] text-ringside-muted">4 matches</p></div>
+            <div class="grid grid-cols-2 max-[640px]:grid-cols-1">
+                <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-4 border-t border-ringside-line px-5 py-4 max-[480px]:grid-cols-[2rem_1fr] max-[480px]:gap-y-1">
+    <span class="text-xs font-bold text-ringside-signal">01</span>
+    <strong class="text-base">Riverside Championship</strong>
+    <em class="text-xs not-italic text-ringside-muted max-[480px]:col-start-2">Singles · Title match</em>
+</div>
+                <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-4 border-t border-ringside-line px-5 py-4 max-[480px]:grid-cols-[2rem_1fr] max-[480px]:gap-y-1">
+    <span class="text-xs font-bold text-ringside-signal">02</span>
+    <strong class="text-base">Tag Team Showcase</strong>
+    <em class="text-xs not-italic text-ringside-muted max-[480px]:col-start-2">Tag team</em>
+</div>
+                <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-4 border-t border-ringside-line px-5 py-4 max-[480px]:grid-cols-[2rem_1fr] max-[480px]:gap-y-1">
+    <span class="text-xs font-bold text-ringside-signal">03</span>
+    <strong class="text-base">Open Challenge</strong>
+    <em class="text-xs not-italic text-ringside-muted max-[480px]:col-start-2">Triple threat</em>
+</div>
+                <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-4 border-t border-ringside-line px-5 py-4 max-[480px]:grid-cols-[2rem_1fr] max-[480px]:gap-y-1">
+    <span class="text-xs font-bold text-ringside-signal">04</span>
+    <strong class="text-base">Main event</strong>
+    <em class="text-xs not-italic text-ringside-muted max-[480px]:col-start-2">Fatal 4-way</em>
+</div>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-ringside-line px-5 py-4 text-sm"><span class="text-xs font-bold uppercase tracking-[0.1em] text-ringside-signal">Blocked</span><strong>Chris Moreno</strong><span class="text-ringside-muted">Injured · not available for booking</span></div>
+        </div>
+</div>
+</section>
     <section id="roster" class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] py-[clamp(4rem,7vw,7rem)] max-[767px]:w-[calc(100%-2.5rem)]" aria-labelledby="roster-title">
     <div class="max-w-4xl">
     <h2 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance max-w-[18ch] text-[clamp(2.6rem,4.5vw,4.5rem)]" id="roster-title">
-    The work starts long before the bell.
+    Know who can work before you book.
 </h2>
-    <p class="mt-5 max-w-2xl text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">A promotion is more than the match card. Keep the people, partnerships and responsibilities behind the show in view.</p>
+    <p class="mt-5 max-w-2xl text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Contracts, injuries, suspensions and retirements for wrestlers, tag teams, managers and referees. A tag team is only bookable when every member is.</p>
 </div>
         <div class="mt-14 grid grid-cols-[1.05fr_0.95fr] items-stretch gap-14 max-[900px]:grid-cols-1 max-[900px]:gap-12">
             <div>
@@ -101,81 +141,57 @@
     <h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance text-[clamp(1.65rem,2.8vw,2.3rem)]">
     Know who is ready.
 </h3>
-    <p class="text-base leading-[1.75] text-ringside-muted col-start-2">Keep talent profiles, employment, injuries and suspensions in view before you make the next booking.</p>
+    <p class="text-base leading-[1.75] text-ringside-muted col-start-2">Contracts, injuries and suspensions sit on every profile, so availability is never a guess.</p>
 </div>
                 <div class="grid grid-cols-[3rem_1fr] gap-x-8 gap-y-3 border-t border-ringside-line py-8 last:border-b max-[767px]:grid-cols-[2rem_1fr] max-[767px]:gap-x-4 max-[767px]:gap-y-2">
     <span class="self-start pt-1.5 text-xs font-bold tracking-[0.08em] text-ringside-signal">02</span>
     <h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance text-[clamp(1.65rem,2.8vw,2.3rem)]">
     Know who belongs together.
 </h3>
-    <p class="text-base leading-[1.75] text-ringside-muted col-start-2">Manage the teams, stables and alliances behind your stories, with membership history that stays connected.</p>
+    <p class="text-base leading-[1.75] text-ringside-muted col-start-2">Tag teams and stables keep their full membership history, not just today’s lineup.</p>
 </div>
                 <div class="grid grid-cols-[3rem_1fr] gap-x-8 gap-y-3 border-t border-ringside-line py-8 last:border-b max-[767px]:grid-cols-[2rem_1fr] max-[767px]:gap-x-4 max-[767px]:gap-y-2">
     <span class="self-start pt-1.5 text-xs font-bold tracking-[0.08em] text-ringside-signal">03</span>
     <h3 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance text-[clamp(1.65rem,2.8vw,2.3rem)]">
     Give every role a place.
 </h3>
-    <p class="text-base leading-[1.75] text-ringside-muted col-start-2">Keep managers and officials alongside your wrestling roster, so the people outside the ropes are part of the plan.</p>
+    <p class="text-base leading-[1.75] text-ringside-muted col-start-2">Managers and referees live on the same roster, with the same status tracking.</p>
 </div>
             </div>
-        <div class="overflow-hidden border border-ringside-line-card border-t-[3px] border-t-ringside-signal bg-ringside-surface-card" aria-label="Illustrative Ringside roster view">
-            <div class="flex justify-between gap-4 border-b border-ringside-line px-5 py-4 text-xs font-bold tracking-[0.1em] text-ringside-muted-subtle"><span>RINGSIDE / ROSTER</span><strong class="text-ringside-signal-soft">18 ACTIVE</strong></div>
-            <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-4 border-b border-ringside-line px-5 py-4"><span class="text-xs font-bold text-ringside-signal">01</span><strong class="text-base">Jordan Vale</strong><em class="text-xs not-italic text-ringside-muted">Available</em></div>
-            <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-4 border-b border-ringside-line px-5 py-4"><span class="text-xs font-bold text-ringside-signal">02</span><strong class="text-base">The Northside Boys</strong><em class="text-xs not-italic text-ringside-muted">Tag team</em></div>
-            <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-4 border-b border-ringside-line px-5 py-4"><span class="text-xs font-bold text-ringside-signal">03</span><strong class="text-base">Riley Hart</strong><em class="text-xs not-italic text-ringside-muted">Manager</em></div>
-            <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-4 border-b border-ringside-line px-5 py-4"><span class="text-xs font-bold text-ringside-signal">04</span><strong class="text-base">Chris Moreno</strong><em class="text-xs not-italic text-ringside-muted">Referee</em></div>
-            <div class="flex justify-between gap-3 border-t border-ringside-line px-5 py-4 text-xs font-bold tracking-[0.1em] text-ringside-muted-subtle"><span>TEAMS 03</span><span>OFFICIALS 02</span><span>STATUS CURRENT</span></div>
+        <div class="self-start overflow-hidden border border-ringside-line-card border-t-[3px] border-t-ringside-signal bg-ringside-surface-card" aria-label="Illustrative Ringside roster view">
+            <div class="flex justify-between gap-4 border-b border-ringside-line px-5 py-4 text-xs font-bold tracking-[0.1em] text-ringside-muted-subtle"><span>RINGSIDE / ROSTER</span><span>AVAILABILITY</span></div>
+            <div class="grid grid-cols-[1fr_auto] items-center gap-4 border-b border-ringside-line px-5 py-4"><div><strong class="block text-base">Jordan Vale</strong><span class="text-xs text-ringside-muted">Wrestler</span></div><em class="text-xs not-italic text-ringside-muted">Available</em></div>
+            <div class="grid grid-cols-[1fr_auto] items-center gap-4 border-b border-ringside-line px-5 py-4"><div><strong class="block text-base">The Northside Boys</strong><span class="text-xs text-ringside-muted">Tag team</span></div><em class="text-xs not-italic text-ringside-muted">Available</em></div>
+            <div class="grid grid-cols-[1fr_auto] items-center gap-4 border-b border-ringside-line px-5 py-4"><div><strong class="block text-base">Riley Hart</strong><span class="text-xs text-ringside-muted">Manager</span></div><em class="text-xs not-italic text-ringside-muted">Available</em></div>
+            <div class="grid grid-cols-[1fr_auto] items-center gap-4 border-b border-ringside-line px-5 py-4"><div><strong class="block text-base">Chris Moreno</strong><span class="text-xs text-ringside-muted">Referee</span></div><em class="text-xs font-bold not-italic text-ringside-signal">Injured</em></div>
+            <div class="grid grid-cols-[1fr_auto] items-center gap-4 px-5 py-4"><div><strong class="block text-base">Dante Cruz</strong><span class="text-xs text-ringside-muted">Wrestler</span></div><em class="text-xs font-bold not-italic text-ringside-signal">Suspended</em></div>
+            <div class="flex justify-between gap-3 border-t border-ringside-line px-5 py-4 text-xs font-bold tracking-[0.1em] text-ringside-muted-subtle"><span>3 AVAILABLE</span><span>2 NOT BOOKABLE</span></div>
         </div>
     </div>
 </section>
-    <section id="features" class="relative isolate overflow-hidden border-y border-ringside-line bg-ringside-surface-deep py-[clamp(4rem,7vw,7rem)]" aria-labelledby="features-title">
+    <section id="history" class="relative isolate overflow-hidden border-y border-ringside-line bg-ringside-surface-deep py-[clamp(4rem,7vw,7rem)]" aria-labelledby="history-title">
     <img class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_52%] max-[767px]:h-[62%] max-[767px]:object-[72%_44%]" src="images/marketing/match-result.webp" srcset="images/marketing/match-result-960.webp 960w, images/marketing/match-result.webp 1672w" sizes="100vw" width="1672" height="941" alt="" aria-hidden="true" loading="lazy">
     <div class="absolute inset-0 -z-10 bg-scrim-right max-[767px]:bg-scrim-fade" aria-hidden="true"></div>
     <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)] relative">
-    <div class="grid grid-cols-[0.8fr_1.2fr] gap-16 max-[900px]:grid-cols-1 max-[900px]:gap-10">
-            <div class="max-w-xl">
-                <h2 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance max-w-[14ch] text-[clamp(2.5rem,4.2vw,3.75rem)]" id="features-title">
-    The work doesn’t stop when the show starts.
+    <div class="max-w-[46rem]">
+            <h2 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance max-w-[16ch] text-[clamp(2.5rem,4.2vw,3.75rem)]" id="history-title">
+    A result should carry the whole story.
 </h2>
-                <p class="mt-6 text-[1.1rem] leading-[1.7] text-ringside-muted">Keep the details connected as the night moves from doors open to final bell.</p>
-            </div>
-
-            <ol class="grid grid-cols-3 border-t border-ringside-line max-[767px]:grid-cols-1" aria-label="A promotion’s show-night workflow">
-                <li id="events" class="min-w-0 scroll-mt-20 border-r border-ringside-line py-6 pr-6 max-[767px]:border-r-0 max-[767px]:border-b max-[767px]:py-5 max-[767px]:pr-0 min-[768px]:last:border-r-0">
-                    <h3 class="text-lg font-bold">Before doors open</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-ringside-muted">Confirm event details and shape the card around the people you’ve booked.</p>
+            <p class="mt-6 max-w-[42rem] text-[1.1rem] leading-[1.7] text-ringside-muted">Connect the match you booked to how it ended, then keep that record with the championship.</p>
+            <ol class="mt-10 border-t border-ringside-line" aria-label="From booking to title history">
+                <li class="grid grid-cols-[9rem_1fr] gap-5 border-b border-ringside-line py-5 max-[767px]:grid-cols-1 max-[767px]:gap-2">
+                    <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Booked</span>
+                    <div><h3 class="font-bold">The match card</h3><p class="mt-1 text-sm leading-relaxed text-ringside-muted">Competitors, referee and title on one match.</p></div>
                 </li>
-                <li id="matches" class="min-w-0 scroll-mt-20 border-r border-ringside-line px-6 py-6 max-[767px]:border-r-0 max-[767px]:border-b max-[767px]:px-0 max-[767px]:py-5 min-[768px]:last:border-r-0">
-                    <h3 class="text-lg font-bold">When the bell rings</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-ringside-muted">Keep competitors, match types and officials together on each match.</p>
+                <li class="grid grid-cols-[9rem_1fr] gap-5 border-b border-ringside-line py-5 max-[767px]:grid-cols-1 max-[767px]:gap-2">
+                    <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Result</span>
+                    <div><h3 class="font-bold">How it ended</h3><p class="mt-1 text-sm leading-relaxed text-ringside-muted">Record the winner and the finish: pinfall, submission, count-out, disqualification and more.</p></div>
                 </li>
-                <li class="min-w-0 py-6 pl-6 max-[767px]:py-5 max-[767px]:pl-0">
-                    <h3 class="text-lg font-bold">After the show</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-ringside-muted">Record the result and carry title history forward.</p>
+                <li class="grid grid-cols-[9rem_1fr] gap-5 border-b border-ringside-line py-5 max-[767px]:grid-cols-1 max-[767px]:gap-2">
+                    <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Title record</span>
+                    <div><h3 class="font-bold">The championship’s history</h3><p class="mt-1 text-sm leading-relaxed text-ringside-muted">Every reign stays on the championship’s history, not in someone’s memory.</p></div>
                 </li>
             </ol>
-        </div>
-</div>
-</section>
-    <section id="championships" class="relative isolate overflow-hidden border-y border-ringside-line bg-ringside-surface-deep" aria-labelledby="championship-title">
-    <img class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_58%]" src="images/marketing/championship.webp" srcset="images/marketing/championship-960.webp 960w, images/marketing/championship.webp 1448w" sizes="100vw" width="1448" height="1086" alt="" aria-hidden="true" loading="lazy">
-    <div class="absolute inset-0 -z-10 bg-scrim-right max-[767px]:bg-scrim-down" aria-hidden="true"></div>
-    <div class="mx-auto w-[calc(100%-6rem)] max-w-[80rem] max-[767px]:w-[calc(100%-2.5rem)] flex min-h-[38rem] items-center py-[clamp(4rem,7vw,7rem)] max-[767px]:min-h-[34rem]">
-    <div class="max-w-xl">
-            <p class="font-body text-[0.75rem] font-bold uppercase tracking-[0.1em] text-ringside-signal mb-4">
-    The part that lasts
-</p>
-            <h2 class="font-display font-normal uppercase tracking-[-0.015em] leading-[1.1] text-balance text-[clamp(2.6rem,4.5vw,4.5rem)]" id="championship-title">
-    Every title has a story.
-</h2>
-            <p class="mt-6 text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">A championship is more than its current holder. Keep title reigns and championship history connected to the people and events that made them matter.</p>
-            <ul class="mt-8"><li class="flex items-center gap-4 border-t border-ringside-line py-4 leading-[1.5]"><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] text-ringside-signal" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
-<span>Manage your championships</span></li>
-<li class="flex items-center gap-4 border-t border-ringside-line py-4 leading-[1.5]"><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] text-ringside-signal" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
-<span>Track champions and title reigns</span></li>
-<li class="flex items-center gap-4 border-t border-ringside-line py-4 leading-[1.5]"><svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8] text-ringside-signal" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
-<span>Keep a record of every era</span></li>
-</ul>
         </div>
 </div>
 </section>
@@ -192,6 +208,10 @@
             <details class="border-b border-ringside-line-bright first:border-t">
     <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-8 text-[1.0625rem] font-semibold transition-colors hover:text-ringside-signal [&::-webkit-details-marker]:hidden">Who is Ringside built for? <span aria-hidden="true" class="inline-block text-2xl font-normal transition-transform">+</span></summary>
     <div class="pb-6 pr-12 text-ringside-muted leading-[1.75]"><p>Ringside is built for wrestling promoters and the teams managing a promotion’s roster, events, matches and championships.</p></div>
+</details>
+            <details class="border-b border-ringside-line-bright first:border-t">
+    <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-8 text-[1.0625rem] font-semibold transition-colors hover:text-ringside-signal [&::-webkit-details-marker]:hidden">Does Ringside handle tag teams, stables and officials? <span aria-hidden="true" class="inline-block text-2xl font-normal transition-transform">+</span></summary>
+    <div class="pb-6 pr-12 text-ringside-muted leading-[1.75]"><p>Yes. Tag teams, stables, managers and referees are part of the roster, each with their own status and membership history.</p></div>
 </details>
             <details class="border-b border-ringside-line-bright first:border-t">
     <summary class="flex min-h-16 cursor-pointer list-none items-center justify-between gap-8 text-[1.0625rem] font-semibold transition-colors hover:text-ringside-signal [&::-webkit-details-marker]:hidden">Does Ringside handle ticket sales? <span aria-hidden="true" class="inline-block text-2xl font-normal transition-transform">+</span></summary>
