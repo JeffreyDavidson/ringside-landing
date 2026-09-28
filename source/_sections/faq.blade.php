@@ -3,6 +3,7 @@
         <div><x-kicker class="mb-4">Built for the real work</x-kicker><x-display-heading id="faq-title" class="text-[clamp(2.6rem,4.5vw,4.5rem)]">For the promotion without a front office.</x-display-heading><p class="mt-6 text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Clear answers about who Ringside serves, what it covers and pricing.</p></div>
         <div>
             <x-faq-item question="Who is Ringside built for?"><p>Ringside is built for wrestling promoters and the teams managing a promotion’s roster, events, matches and championships.</p></x-faq-item>
+            <x-faq-item question="Does Ringside handle tag teams, stables and officials?"><p>Yes. Tag teams, stables, managers and referees are part of the roster, each with their own status and membership history.</p></x-faq-item>
             <x-faq-item question="Does Ringside handle ticket sales?"><p>Ticket sales and payments are outside Ringside’s current feature set. Its focus is the wrestling operation: your people, shows, matches and titles.</p></x-faq-item>
             <x-faq-item question="How much does Ringside cost?"><p>Pricing details are still being finalized and will be shared before launch.</p></x-faq-item>
         </div>
