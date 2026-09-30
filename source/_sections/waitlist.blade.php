@@ -1,6 +1,13 @@
 <section class="border-t-[3px] border-t-ringside-red bg-ringside-surface-index" id="waitlist" aria-labelledby="closing-title">
     <x-page-width class="grid grid-cols-[1.25fr_1fr] items-center gap-24 py-[clamp(4rem,7vw,7rem)] max-[900px]:grid-cols-1 max-[900px]:gap-10">
-        <div><x-display-heading id="closing-title" class="text-[clamp(2.6rem,4.5vw,4.5rem)]">Get early access to Ringside.</x-display-heading></div>
+        <div>
+            <x-display-heading id="closing-title" class="text-[clamp(2.6rem,4.5vw,4.5rem)]">Get early access to Ringside.</x-display-heading>
+            <div class="mt-10 max-w-lg border-t border-ringside-line pt-6">
+                <p class="text-xs font-bold uppercase tracking-[0.1em] text-ringside-signal">Built by someone who’s run the show</p>
+                <p class="mt-3 text-base leading-[1.75] text-ringside-muted text-pretty">I grew up on 90s wrestling, became an indy wrestler in 2007, and started promoting my own company in 2009. The hard part was never the shows. It was keeping track of event plans and keeping our website up to date. I couldn’t find an easy way to do that, so I built Ringside.</p>
+                <p class="mt-3 text-sm font-bold">Jeffrey Davidson, founder</p>
+            </div>
+        </div>
         <div>
             <p class="text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty">Join the founding list for product updates and launch details.</p>
             <form class="mt-6 flex flex-wrap gap-3" action="/api/waitlist.php" method="post" onsubmit="handleWaitlist(event)">
