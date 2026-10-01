@@ -1,3 +1,4 @@
+/* Hallmark · design-system: DESIGN.md · genre: editorial (dark, poster) · anchor hue: signal red */
 @import "tailwindcss" source(none);
 
 @source "../**/*.blade.php";
@@ -27,7 +28,7 @@
     --color-ringside-red: #cb2028;
     --color-ringside-red-dark: #a61920;
     --color-ringside-outline: #b7b7b9;
-    --color-ringside-white: #ffffff;
+    --color-ringside-white: #f7f7f5;
     --color-ringside-white-half: rgb(255 255 255 / 50%);
     --color-ringside-white-third: rgb(255 255 255 / 35%);
     --color-ringside-white-subtle: rgb(255 255 255 / 8%);
@@ -76,6 +77,7 @@
 }
 
 html {
+    overflow-x: clip;
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
 }
@@ -95,6 +97,7 @@ section[id] {
 }
 
 body {
+    overflow-x: clip;
     margin: 0;
     background: var(--color-ringside-surface);
     color: var(--color-ringside-ink);

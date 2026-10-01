@@ -51,7 +51,7 @@
             <x-wordmark />
             <nav class="flex items-center gap-5" aria-label="Main navigation">
                 <a class="inline-flex min-h-11 items-center font-semibold transition-colors hover:text-ringside-signal max-[430px]:!hidden" href="#event-card">Features</a>
-                <a class="inline-flex min-h-11 items-center justify-center gap-4 border border-ringside-outline px-5 py-2.5 font-bold transition-colors hover:border-ringside-white hover:bg-ringside-surface-hover max-[520px]:px-3 max-[520px]:text-sm max-[430px]:gap-2 max-[430px]:px-2.5 max-[430px]:text-xs" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
+                <a class="inline-flex min-h-11 items-center justify-center gap-4 border border-ringside-outline px-5 py-2.5 font-bold transition-colors hover:border-ringside-white hover:bg-ringside-surface-hover max-[520px]:px-3 max-[520px]:text-sm max-[430px]:gap-2 max-[430px]:px-2.5 max-[430px]:text-xs whitespace-nowrap" href="#waitlist"><span class="max-[359px]:hidden">Join the founding class</span><span class="hidden max-[359px]:inline">Join</span> <x-icon.arrow-up-right /></a>
             </nav>
         </x-page-width>
     </header>
@@ -91,7 +91,7 @@
                 if (response.status === 429) throw new Error('rate-limited');
                 if (!response.ok || !result.success) throw new Error('Unable to join');
                 form.reset();
-                status.textContent = "You're on the list. We'll be in touch.";
+                status.textContent = "You’re on the list. We’ll be in touch.";
                 status.classList.add('text-ringside-signal');
                 label.textContent = 'You’re in';
                 button.removeAttribute('aria-busy');

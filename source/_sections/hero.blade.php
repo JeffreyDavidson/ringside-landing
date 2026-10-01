@@ -11,11 +11,3 @@
         </div>
     </x-page-width>
 </section>
-
-<nav class="border-y border-ringside-line bg-ringside-surface-index" aria-label="Explore the features">
-    <x-page-width class="grid grid-cols-3 max-[767px]:grid-cols-1">
-        <a class="flex items-center gap-4 border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover min-[768px]:border-l min-[768px]:last:border-r max-[767px]:border-b max-[767px]:px-0 max-[767px]:last:border-b-0" href="#event-card"><span>Build the card</span><x-icon.arrow-up-right class="ml-auto" /></a>
-        <a class="flex items-center gap-4 border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover min-[768px]:border-l min-[768px]:last:border-r max-[767px]:border-b max-[767px]:px-0 max-[767px]:last:border-b-0" href="#roster"><span>Know who can work</span><x-icon.arrow-up-right class="ml-auto" /></a>
-        <a class="flex items-center gap-4 border-ringside-line px-6 py-6 text-base font-bold transition-colors hover:bg-ringside-surface-hover min-[768px]:border-l min-[768px]:last:border-r max-[767px]:border-b max-[767px]:px-0 max-[767px]:last:border-b-0" href="#history"><span>Keep the history</span><x-icon.arrow-up-right class="ml-auto" /></a>
-    </x-page-width>
-</nav>
