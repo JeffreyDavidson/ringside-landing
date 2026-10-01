@@ -18,7 +18,7 @@
             </ul>
         </div>
         <figure class="max-w-[42.5rem]">
-            <div class="overflow-hidden border border-ringside-line-card border-t-[3px] border-t-ringside-signal bg-ringside-surface-card">
+            <div class="overflow-hidden border border-ringside-line-card bg-ringside-surface-card">
                 <picture>
                     <source media="(max-width: 767px)" srcset="images/product/roster-availability-mobile.webp" width="716" height="1114">
                     <img class="block h-auto w-full" src="images/product/roster-availability.webp" width="1360" height="1134" alt="Ringside’s wrestler roster. Every wrestler shows as Employed; Sam Whitlock also carries an Injured badge and Dante Cruz a Suspended badge." loading="lazy">

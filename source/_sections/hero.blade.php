@@ -6,7 +6,7 @@
         <x-display-heading tag="h1" id="hero-title" class="text-[clamp(3.2rem,7.5vw,7rem)] leading-[1.13]"><span class="block">Run the show.</span><span class="block text-signal">Own the story.</span></x-display-heading>
         <p class="my-6 max-w-[33rem] text-[clamp(1.1rem,1.6vw,1.35rem)] leading-[1.6] text-ringside-muted-bright text-pretty">Ringside knows who’s under contract, hurt or suspended before you book them, and keeps every result and title reign on the record.</p>
         <div class="flex flex-wrap gap-3">
-            <a class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-red bg-ringside-red px-7 py-3.5 text-base font-bold leading-[1.4] text-ringside-white shadow-ringside-glow transition-colors hover:border-ringside-red-dark hover:bg-ringside-red-dark" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
+            <a class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-red bg-ringside-red px-7 py-3.5 text-base font-bold leading-[1.4] text-ringside-white transition-colors hover:border-ringside-red-dark hover:bg-ringside-red-dark" href="#waitlist">Join the founding class <x-icon.arrow-up-right /></a>
             <a class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-outline px-7 py-3.5 text-base font-bold leading-[1.4] transition-colors hover:border-ringside-white hover:bg-ringside-surface-hover" href="#event-card">Explore Ringside <svg class="h-5 w-5 flex-none fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg></a>
         </div>
     </x-page-width>
