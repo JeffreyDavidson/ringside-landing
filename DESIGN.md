@@ -146,7 +146,7 @@ Keep a clear reading path: one dominant statement, one supporting paragraph, and
 | FAQ ("Questions") | `clamp(2rem, 3vw, 2.75rem)` | `clamp(3rem, 5vw, 4.5rem)` |
 | Closing ("For the promotion without a front office.") | `clamp(2.6rem, 4.5vw, 4.5rem)` | `clamp(4rem, 7vw, 7rem)` |
 
-Avoid stacking two sections with the same shape (heading, paragraph, ruled list). Supporting points use bold body type, not Anton, and no decorative numbering. Text over photography stays in the scrim's dark side (for example `max-w-[min(56rem,62vw)]` on the history strip) and must measure 4.5:1 against the brightest pixel behind it.
+Avoid stacking two sections with the same shape (heading, paragraph, ruled list). Supporting points use bold body type, not Anton, and no decorative numbering. Sequences (like booked → result → title record) are a vertical step list on a single rule with small signal-red markers, not three equal columns. Header and button labels never wrap: shorten them at narrow widths instead. Text over photography stays in the scrim's dark side (for example `max-w-[min(56rem,62vw)]` on the history strip) and must measure 4.5:1 against the brightest pixel behind it.
 
 ## Elevation & Depth
 

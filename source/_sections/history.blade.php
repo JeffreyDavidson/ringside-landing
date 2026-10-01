@@ -4,20 +4,20 @@
     <x-page-width class="relative">
         <x-display-heading tag="h2" id="history-title" class="max-w-[22ch] text-[clamp(2rem,3vw,2.75rem)]">A result should carry the whole story.</x-display-heading>
         <p class="mt-4 max-w-[38rem] leading-[1.7] text-ringside-muted">Connect the match you booked to how it ended, then keep that record with the championship.</p>
-        <ol class="mt-8 grid max-w-[min(56rem,62vw)] grid-cols-3 gap-8 max-[767px]:max-w-none max-[767px]:grid-cols-1 max-[767px]:gap-6" aria-label="From booking to title history">
-                <li class="border-t border-ringside-line pt-5">
+        <ol class="mt-8 grid max-w-[38rem] gap-7 border-l border-ringside-line" aria-label="From booking to title history">
+                <li class="relative pl-7 before:absolute before:-left-[5px] before:top-[0.2rem] before:h-[9px] before:w-[9px] before:bg-ringside-signal before:content-['']">
                     <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Booked</span>
-                    <h3 class="mt-3 font-bold">The match card</h3>
+                    <h3 class="mt-2 font-bold">The match card</h3>
                     <p class="mt-1 text-sm leading-relaxed text-ringside-muted">Competitors, referee and title on one match.</p>
                 </li>
-                <li class="border-t border-ringside-line pt-5">
+                <li class="relative pl-7 before:absolute before:-left-[5px] before:top-[0.2rem] before:h-[9px] before:w-[9px] before:bg-ringside-signal before:content-['']">
                     <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Result</span>
-                    <h3 class="mt-3 font-bold">How it ended</h3>
+                    <h3 class="mt-2 font-bold">How it ended</h3>
                     <p class="mt-1 text-sm leading-relaxed text-ringside-muted">Record the winner and the finish: pinfall, submission, count-out, disqualification and more.</p>
                 </li>
-                <li class="border-t border-ringside-line pt-5">
+                <li class="relative pl-7 before:absolute before:-left-[5px] before:top-[0.2rem] before:h-[9px] before:w-[9px] before:bg-ringside-signal before:content-['']">
                     <span class="text-xs font-bold uppercase tracking-[0.08em] text-ringside-signal">Title record</span>
-                    <h3 class="mt-3 font-bold">The championship’s history</h3>
+                    <h3 class="mt-2 font-bold">The championship’s history</h3>
                     <p class="mt-1 text-sm leading-relaxed text-ringside-muted">Every reign stays on the championship’s history, not in someone’s memory.</p>
                 </li>
         </ol>
