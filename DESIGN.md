@@ -150,7 +150,7 @@ Avoid stacking two sections with the same shape (heading, paragraph, ruled list)
 
 ## Elevation & Depth
 
-The system is flat by default. Depth comes from tonal layering, photography, scrims, rules, and spacing rather than floating cards. The only routine shadow is a restrained red glow under the primary hero action (`shadow-ringside-glow`).
+The system is flat by default. Depth comes from tonal layering, photography, scrims, rules, and spacing rather than floating cards. There are no shadows or glows, including on the primary action: the red fill is enough. Product screenshots sit in a plain 1px `line-card` border with no accent stripe on any edge.
 
 Photo-backed sections use the shared scrim utilities in `source/css/marketing.css`, all built from `surface-deep`: `bg-scrim-right` (desktop, left-to-right), `bg-scrim-down` (mobile, full-height photo) and `bg-scrim-fade` (mobile, photo cropped to the top that fades to a solid surface). Keep text over photography at 4.5:1 or better against the brightest pixel behind it; don't add one-off `rgb()` gradients. The event-card preview uses a signal-red top rule and internal dividers instead of a drop shadow. Avoid generic gray drop shadows and glass effects.
 
