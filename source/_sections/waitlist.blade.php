@@ -9,7 +9,7 @@
             </div>
         </div>
         <div>
-            <p class="text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty"><strong class="text-ringside-ink">Get early access to Ringside.</strong> Join the founding list for launch details.</p>
+            <p class="text-[1.125rem] leading-[1.75] text-ringside-muted text-pretty"><strong class="text-ringside-ink">Founding access opens in early 2027.</strong> Join the list and we’ll email you when it does.</p>
             <form class="mt-6 flex flex-wrap gap-3" action="/api/waitlist.php" method="post" onsubmit="handleWaitlist(event)">
                 <label class="sr-only" for="waitlist-email">Email address</label>
                 <input class="min-h-14 min-w-0 basis-full border border-ringside-line-bright bg-ringside-surface-card px-4 text-ringside-ink placeholder:text-ringside-muted-subtle focus:border-ringside-white focus:outline-3 focus:outline-ringside-white focus:outline-offset-2" id="waitlist-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" spellcheck="false" aria-describedby="waitlist-status waitlist-note" required>
