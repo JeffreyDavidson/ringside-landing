@@ -20,7 +20,7 @@
                 </div>
                 <button class="inline-flex min-h-14 items-center justify-center gap-4 border border-ringside-red bg-ringside-red px-7 py-3.5 text-base font-bold leading-[1.4] text-ringside-white transition-colors hover:border-ringside-red-dark hover:bg-ringside-red-dark max-[520px]:w-full" type="submit"><span data-waitlist-label>Join the founding class</span> <x-icon.arrow-up-right /></button>
             </form>
-            <p class="mt-3 text-sm font-bold empty:hidden" id="waitlist-status" role="status" aria-live="polite"></p>
+            <p class="text-sm font-bold [&:not(:empty)]:mt-3" id="waitlist-status" role="status" aria-live="polite"></p>
             <p class="mt-3 text-sm text-ringside-muted-subtle" id="waitlist-note">No spam. Your email goes to Resend, our list provider, and is only used for early access, product feedback and launch updates.</p>
         </div>
     </x-page-width>
